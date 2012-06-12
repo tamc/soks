@@ -1,0 +1,63 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+	<title><%= query['regex'] ? "Results of search for '#{query['regex']}'" : page.name %></title>
+	<meta name='description' content='<%= description %>' />
+	<meta name='keywords' content='Soks, <%= name %>' />
+	<link href='<%= file 'stylesheet.css' %>' rel='stylesheet' type='text/css' media='screen' />
+	<link href='<%= file 'print_stylesheet.css' %>' rel='stylesheet' type='text/css' media='print' />	
+	<link rel='alternate' type='application/rss+xml' title='RSS' href='<%= url page.name, 'rss' %>' />
+	<script src='<%= file 'newpage.js' %>' type='text/javascript'></script>
+</head>
+<body onkeypress='hotkey(event,"<%= root_url %>/edit/");'>
+	
+	<div id='content'>
+		<%= content_of_page %>
+	</div>
+	
+	<div id='menu'>
+	
+		<h1><%= self.name %></h1>
+		<a href='<%= url 'Home Page' %>' accesskey='H' >
+			<img width='149' src='<%= file 'logo.jpg' %>' alt='<%= self.name %>' />
+		</a> 
+	
+		<h2>Search</h2>	
+		<form method='get' action='<%= url page.name, 'find' %>' >
+			<input 	class='search' 
+					name='regex' 
+					value='<%= query['regex'] || "Enter word & press return" %>'
+			 		onfocus="this.value=this.value.replace('Enter word & press return','')" 
+			 		size='17' />
+		</form>
+		
+		<h2><a href='<%= url "Sidebar Page" %>' >Important Pages</a></h2>
+		<% sidebarpage = @wiki.page( "Sidebar Page") %>
+		<div class='linklist'>
+			<%= redcloth( sidebarpage) %>
+		</div>
+		
+		<% if page %>
+			<% dynamic_links  = page.links_to - sidebarpage.links_from - [ sidebarpage ] %>
+			<% dynamic_links.delete_if { |page| page.name =~ /^Site Index ([a-z]|Other)\./i } %>
+			<% unless dynamic_links.empty? %>
+				<h2>Pages that link here</h2>
+				<div class='linklist'>
+					<% dynamic_links.each do |linkedpage| %>
+						<a href='<%= url linkedpage.name %>'><%= linkedpage.name %></a>
+					<% end %>
+				</div>
+			<% end %>
+		<% end %>
+		
+		<h2>Add a page</h2>
+		<div class='linklist'>
+			<a href='<%= url 'Type a title here', 'edit' %>'>Add a new page</a>
+			<a href='<%= url 'Picture of Type a title here', 'edit' %>'>Upload a new picture</a>
+			<a href='<%= url 'Attached Type a title here', 'edit' %>'>Upload a new file</a>
+		</div>
+		
+		<h2>Powered by <a href='http://www.soks.org'>Soks</a></h2>
+	</div> <!-- menu -->
+</body>
+</html>

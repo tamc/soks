@@ -1,0 +1,30 @@
+h1. API for classes to modify the wiki
+
+There is a very simple API for classes to modify the wiki.
+
+Any class can register to be notified of changes to the wiki by:
+
+* @@wiki.watch_for( :start ) { |event, wiki, view| do whatever you want }@
+* @@wiki.watch_for( :page_created ) { |event, page, revision| do whatever you want }@
+* @@wiki.watch_for( :page_revised ) { |event, page, revision| do whatever you want }@
+* @@wiki.watch_for( :page_deleted ) { |event, page, revision| do whatever you want }@
+* @@wiki.watch_for( :page_viewed ) { |event,page,view,author| do whatever you want }@
+* @@wiki.watch_for( :shutdown ) { |event| do whatever you want }@
+
+
+These notifications are sent by a separate low priority thread from the one that is interacting with the user.   Using these notifications a class can make changes to the wiki by calling:
+
+<code>
+@wiki.revise( pagename, newcontent, author )
+</code>
+
+The normal place for these classes to be initialized is from the start.rb file.  The normal place for these classes to be stored is in the soks/lib/helpers directory.
+
+Examples of helpers that use this api:
+* [[AutomaticSummary => automatic summaries]] (which in turn are used by the SiteIndex and RecentChanges classes.
+* AutomaticCalendar and AutomaticUpcomingEvents
+* rss2wiki
+* mail2wiki
+* wiki2html
+
+Tag: Include this page in the distribution

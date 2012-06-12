@@ -1,0 +1,44 @@
+<span class='pagename'><a href='<%= url page.name %>'><%= page.name %></a> <%= page.deleted? ? "(Deleted)" : '' %></span>
+
+<h1><%= pagename %></h1>
+
+<% seconds_per_change = (page.revised_on-page.created_on)/page.revisions.size.to_i %>
+
+<p>This page was created on <%= page.created_on %> by <%= page.revisions.first.author %>.</p>
+<% if page.revisions.size > 1 %>
+	<p>It was last updated on <%= page.revised_on %> by <%= page.author %>.</p>
+	<p>It has been changed <%= page.revisions.size %> times (roughly once every <%= seconds_per_change.to_time_units %>).</p>
+<% end %>
+
+<div class='metacolumn' >
+<h2>Wiki links from this page</h2>
+
+<ul>
+<% page.links_from.each do |linkedpage| %>
+	<li><a href='<%= url linkedpage.name %>'><%= linkedpage.name %></a></li>
+<% end %>
+</ul>
+
+</div>
+
+<div class='metacolumn' >
+<h2>Wiki links to this page</h2>
+
+<ul>
+<% page.links_to.each do |linkedpage| %>
+	<li><a href='<%= url linkedpage.name %>'><%= linkedpage.name %></a></li>
+<% end %>
+</ul>
+
+</div>
+
+<div class='metacolumn' >
+<h2>Authors</h2>
+
+<ol>
+<% page.revisions.map { |revision| revision.author }.uniq.each do |author| %>
+	<li><a href='<%= url author %>'><%= author %></a></li>
+<% end %>
+</ol>
+
+</div>

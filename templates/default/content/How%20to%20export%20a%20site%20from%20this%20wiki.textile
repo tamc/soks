@@ -1,0 +1,82 @@
+h1. How to export a site from this wiki
+
+h2. How to export as html
+
+Modify your start.rb file to include:
+<pre>
+<code>
+require 'helpers/wiki2html'
+Wiki2Html.new( wiki, view, 
+:views_to_copy => ['view','meta','rss'],
+:extension => '.html',
+:destination_dir => '/Users/tamc2/Sites',
+:destination_url => 'http://localhost/~tamc2')
+</code>
+</pre>
+
+Where desitination_dir should be the directory you wish to export the html to, and destination_url should be the base_url you wish to use in the exported pages (could be just '/').
+
+When you restart the wiki it will then maintain an html copy of the wiki in that directory.
+
+h2. How to export the raw data
+
+The contents of this site are stored in flat files in the 'contents' folder of this wiki (soks-wiki/contents by default).  They are the ones with the .textile ending.  Should be pretty easy to transfer them to wherever you need.
+
+The authors, and change history of each page are stored in the same folder with a yaml extension. These are yaml'd files that contain many documents.  Each document contains a single revision. Each revision is an array of [ revision number, changes, author, creation time ].  The changes is an array of change groups.  Each change group is an array of changed lines.  There may be several documents with the same revision number.  The last document with a particular revision number is the 'definative' one.
+
+E.g. The saved copy of a page titled Hello World would be two files:
+# Hello%20World.textile
+# Hello%20World.yaml
+
+Hello%20World.textile might contain:
+<pre>
+h1. Hello world
+
+What a beautiful world
+</pre>
+
+Hello%20World.yaml might contain
+<pre>
+--- # Start of document
+- 0 # Revision number
+- tamc # Revision author
+- 2005-01-23 22:53:11.081896 +00:00 # Revision time
+- # Array of change groups
+  - # Array of changes
+    -  # Each change is an array
+      - "+" # Add or delete
+      - 0 # Line number
+      - h1. Hello george # What the line is
+---
+- 0 # If a new revision is made by the same author within 30 minutes the revision number is not increased.  This is the definitive revision 0, the previous one should be ignored.
+- tamc
+- 2005-01-23 22:55:11.081896 +00:00
+- 
+  - 
+    - 
+      - "-"
+      - 0
+      - h1. Hello george
+    - 
+      - "+"
+      - 0
+      - h1. Hello world
+    - 
+---
+- 0
+- tamc
+- 2005-01-23 22:55:11.081896 +00:00
+- 
+  - 
+    - 
+      - "+"
+      - 1
+      - ""
+    - 
+      - "+"
+      - 2
+      - What a beautiful world
+    - 
+</pre>
+
+Tag: Include this page in the distribution

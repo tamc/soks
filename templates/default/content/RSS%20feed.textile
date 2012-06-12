@@ -1,0 +1,9 @@
+h1. RSS Feed
+
+Each page has an rss feed accesses at the url /rss/pagename.  This contains the last 15 revisions to a page.
+
+The rss currently only shows:
+* Changes to the textile (not html)
+* Added lines
+
+Tag: Include this page in the distribution

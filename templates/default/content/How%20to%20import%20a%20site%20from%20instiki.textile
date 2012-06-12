@@ -1,0 +1,15 @@
+h1. How to import a site from instiki
+
+[[ Instiki => www.instiki.org ]] is great, and was definitely an inspiration for this site.  If, however, you wish to import a wiki from instiki to here then you need to:
+
+# Launch your instiki wiki
+# Go to 'export' and click on 'Markup (textile)'
+# Unzip the downloaded folder.
+# Create a soks wiki: <code>soks-create-wiki.rb</code>
+# Stop the wiki <code>ctrl-c</code>
+# Copy the contents of the downloaded folder (step 3) into soks-wiki/content
+# Start the wiki <code>ruby soks-wiki/start.rb</code>
+
+Your instiki content should then appear.  Note that all the links still work, but that all the pages have their WikiWord names.
+
+Tag: Include this page in the distribution

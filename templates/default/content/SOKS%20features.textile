@@ -1,0 +1,19 @@
+h2. Soks Features
+
+p{font-size: x-small;}. Soks Features is a separate page that has been inserted into the home page using [ [ insert soks features ]].
+
+* Automatic linking between pages (no ugly WikiWords or brackets).
+* Add, move and delete pages easily
+* Calendars, automatic summaries and the like
+* An API for classes to modify the wiki
+* Flat file storage (which makes it easy to [[ import from instiki => how to import a site from instiki ]] using its export function)
+* Theming: easily change the how the wiki looks using per wiki templates.
+* [[password protection => how to password protect your wiki]] support, with the authentication scheme selected based on a regexp of the page title.
+* Built in web server (No need for Apache)
+* Textile text formatting
+* Uploads and Images
+* RSS: a feed for each page enables easy tracking of changes
+
+See also: planned features and list of changes
+
+p{display:none;}. Tag: Include this page in the distribution

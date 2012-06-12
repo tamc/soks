@@ -1,0 +1,22 @@
+h1. Congratulations, you have installed SOKS 
+
+Soks is a wiki engine, written in the Ruby programming language. Soks's licence is the free and liberal Ruby licence, so please feel free to use and modify it (though the author would appreciate donations, to be used for a new mac).
+
+p{background:yellow;padding:10px;}. A limited selection of help and bug reports are included here.  For more information, and to share experiences, please visit http://www.soks.org.
+
+[[insert SOKS features]]
+
+[[insert Instructions and Howtos]]
+
+[[insert known bugs]]
+
+Be sure to check http://www.soks.org/wiki/KnownBugs for the latest bug reports.
+
+h2. Feedback
+
+* Please send me your feedback.  tamc@rubyforge.com.  
+* To keep track of developments, you may wish to subscribe to the mailing list at http://rubyforge.org/projects/soks.
+
+[[insert picture of a pair of soks]]
+
+Tag: Include this page in the distribution

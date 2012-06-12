@@ -1,0 +1,35 @@
+<span class='pagename'>Search Results</span>
+
+<%
+search_regexp = /#{query['regex'].strip}/i
+title_results = @wiki.select { |name,apage| name=~ search_regexp }
+text_results = @wiki.select { |name,apage| apage.content=~ search_regexp }
+%>
+
+<h1>Results of Search for &#8220;<%= query['regex'] %>&#8221;</h1>
+
+<% unless title_results.empty? %>
+	<h2>Matches in the titles of pages</h2>
+	<ul>
+	<% title_results.each do |name, page| %>
+		<li><a href='<%= url name %>' ><%= name %></a></li>
+	<% end %>
+	</ul>
+<% else %>
+	<p>No matches in the titles of pages</p>
+<% end %>
+
+<% unless text_results.empty? %>
+	<h2>Matches in the text of pages</h2>
+	<ul>
+	<% text_results.each do |name, page| %>
+		<li><a href='<%= url name %>' ><%= name %></a></li>
+	<% end %>
+	</ul>
+<% else %>
+	<p>No matches in the text of pages</p>
+<% end %>
+
+<div class='command'>
+	<a href='<%= url query['regex'], "edit" %>' accesskey="E" >Create a page titled &#8220;<%= query['regex'] %>&#8221;</a>
+</div>

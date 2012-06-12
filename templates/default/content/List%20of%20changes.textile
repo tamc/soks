@@ -1,0 +1,10 @@
+h1. List of changes
+
+There are three list of changes pages, all created automatically from submissions to the darcs repository:
+# Changes to soks-stable contains the changes that actually make it to a release.
+# Changes to soks-testing gives a flavour of what (might) be coming in the next couple of releases.
+# Changes to soks-development gives a sense of experiments with the code, some of which might make it to a release.
+
+If you wish to see changes from before the switch to darcs (i.e. version 1.0.1 and before) please see the list of changes for older versions.
+
+Tag: Include this page in the distribution

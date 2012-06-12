@@ -1,0 +1,216 @@
+body {	margin:0px;	
+		padding:0px;
+		font-size:small;
+		color:#333;
+		font-family: arial, sans-serif;	
+		background-color:white;	
+	}
+
+h1, h1 a, h1 a:visited { color:#008000;	}
+h2, h2 a, h2 a:visited { color:#008000;	}
+
+a {	
+	color:#888;	
+	text-decoration:none;	
+}
+
+a:visited {color:#888;}
+
+a:hover {	
+	text-decoration:underline;
+	color: #000;
+}
+
+a.missing {
+	color:#E00000;
+}
+
+td {
+	font-size:smaller;
+}
+
+img {
+	border-style: none;
+	max-width: 300px;
+}
+
+#content {	
+	margin:0px 210px 50px 10px;	
+	padding:10px;	
+}
+
+/* Based, with permission, on bluerobot.com */
+#menu {		
+	position:absolute;	
+	top:40px;	
+	right:10px;	
+	width:162px;
+	text-align: center;	
+	background-color:#E00000;	
+	border:1px solid #000000;
+	/* Again, the ugly brilliant hack. */	voice-family: "\"}\"";	voice-family:inherit;	width:152px;	}/* Again, "be nice to Opera 5". */body>#menu {width:152px;}
+
+#menu input.search {
+	width:149px;
+}
+
+#menu h1 {
+	font-size: smaller;
+	background-color: #900000;
+	color: white;
+	padding: 5px;
+	margin: 0px;
+	font-weight: bold;
+}
+
+#menu h2 {
+	font-size: smaller;
+	background-color: #900000;
+	color: white;
+	padding: 5px;
+	margin: 12px 0px 0px 0px;
+	font-weight: bold;
+}
+
+#menu h2 a, #menu h2 a:visited {
+	color: white;
+}
+
+.linklist {
+}
+
+.linklist a, .linklist a:visited {
+	margin: 0px;
+	padding: 3px 5px;
+	color: black;
+	display: block;
+}
+
+.linklist a:hover {
+	background-color:#F4E600;
+	text-decoration: none;
+}
+
+.pagename {
+	font-size: xx-small;
+	display: block;
+}
+
+.command {
+	border-top: 1px solid #333;
+	padding-top: 5px;
+	margin-top: 20px;
+}
+
+.subpage {
+	padding: 10px;
+	margin: 10px;	
+	border: solid 1px #AAAAAA;
+	font-size:x-small;
+}
+
+p.more {
+	font-size: xx-small;
+	text-align: right;
+	padding: 0px;
+	font-color: #grey;
+	color: gray;
+}
+
+.subpage h1 {
+	color:#008000;
+}
+
+.calendar td {
+	border: solid 1px #AAAAAA;
+	text-align: center;
+}
+
+.upcomingevents {
+	padding: 0px 10px 0px 10px;
+	margin: 0px;	
+	border: solid 1px #AAAAAA;
+}
+
+a.pageview {
+	display: inline;
+}
+
+pre.change {
+	margin: 0px;
+	padding: 0px;
+}
+
+.change {
+	margin-top: 20px;
+	border-top: solid 1px #AAAAAA;
+}
+
+#fileedittitle input {
+	width: 85%;
+}
+
+#edittitle input {
+	width: 95%;
+}
+
+#editcontent textarea {
+	width: 100%;
+	height: 75%;
+}
+
+
+.help {
+	color: red;
+	text-align: center;
+}
+
+#tips h1 {
+	padding-left: 5px;
+	margin-top: 0px;
+}
+
+#tips li, #tips ul {
+	list-style-type: none;
+	padding-left: 5px;
+}
+
+.metacolumn {
+	display: inline;
+	font-size: smaller;
+}
+
+form.editpage {
+	display: inline;
+}
+
+fieldset {
+	border: none;
+}
+
+div.undochange {
+	border-top: solid 1px #AAAAAA;
+	margin-top: 10px;
+}
+
+.undochange li {
+	list-style-type: none;
+	padding-left: 0px;
+}
+
+.undochange input {
+	margin-left: 40px;
+	margin-top: 0px;
+	margin-bottom: 10px;
+}
+
+.undochange p {
+	font-weight: bold;
+	margin-top: 5px;
+}
+
+
+.recentchanges li, .recentchanges ul  {
+	list-style-type: none;
+	padding-left: 5px;
+}

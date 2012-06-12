@@ -1,0 +1,71 @@
+h1. How to re-build the page cache
+
+If you upgrade, or something goes wrong, or you just delete the contents of the cache directory in your wiki, then it will be rebuilt automatically.  Unfortunately this can take quite a long time for very large wikis (I have a 4,500 page wiki).  I will try and improve this in a future version of soks, but in the mean time, you can write yourself a small script to rebuild the cache by duplicating the start.rb script in your wiki folder and modifying it to be something like this.
+
+<pre>
+<code>
+#!/usr/local/bin/ruby
+
+# This file is to rebuild the cache.  Don't blindly copy, but make your start.rb look like this.
+
+$LOG = Logger.new(STDOUT)
+$LOG.level = Logger::DEBUG
+$LOG.datetime_format = "%Y-%m-%d %H:%M:%S"
+
+#Add the required libraries to the search path
+begin
+	require 'rubygems'
+	require_gem 'Soks', '~> 1.0.0'
+	$LOG.info 'Loaded Soks 1.0.0 from gem'
+rescue LoadError
+	$LOG.info "Soks Gem version 1.0.0 could not be found"
+	$:.push( "/usr/lib/ruby/gems/1.8/gems/Soks-1.0.0/lib","/usr/lib/ruby/gems/1.8/gems/Soks-1.0.0/lib/helpers","/usr/lib/ruby/gems/1.8/gems/Soks-1.0.0//contrib" )
+	require 'soks'
+	$LOG.info 'Loaded Soks libraries from /usr/lib/ruby/gems/1.8/gems/Soks-1.0.0/lib","/usr/lib/ruby/gems/1.8/gems/Soks-1.0.0/lib/helpers","/usr/lib/ruby/gems/1.8/gems/Soks-1.0.0//contrib'
+end
+
+root_directory = File.expand_path( File.dirname( __FILE__) )
+$MESSAGES = YAML.load( IO.readlines("#{root_directory}/views/messages.yaml").join )
+banned_titles = IO.readlines("#{root_directory}/banned_titles.txt").map { |title| title.strip }
+
+module Notify
+	def notify( event, *messages)
+		#raise "Sorry! Shutting down..." if @shutting_down
+		#self.event_queue.event( event, messages )
+	end
+end
+
+class View
+	def shutdown
+		@wiki.save_cache(REDCLOTH_CACHE_NAME,@redcloth_cache)
+	end
+end
+
+wiki = Wiki.new( "#{root_directory}/content", "#{root_directory}/caches" )
+wiki.load_all_pages
+wiki.shutdown
+$LOG.info "Written page cache"
+
+view = View.new( wiki, "http://localhost:9999", "#{root_directory}/views" )
+view.name = 'A Soks Wiki'
+view.description = 'A Soks Wiki for you!'
+view.reload_erb_each_request = false
+view.dont_frame_views = ['print','rss','listrss','linksfromrss']
+view.redcloth_hard_breaks = false
+view.author_to_email_conversion = '@address-not-known.com'
+
+wiki.each do |pagename, page| 
+	view.rollingmatch[ page.name ] = page
+end
+
+wiki.each do |pagename, page| 
+	view.redcloth( page )
+end
+
+wiki.shutdown
+view.shutdown
+$LOG.info "Written view cache"
+</code>
+</pre>
+
+Tag: Include this page in the distribution

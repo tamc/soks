@@ -1,0 +1,8 @@
+<span class='pagename'><a href='<%= url page.name, "meta" %>'><%= pagename %></a> <%= page.deleted? ? "(Deleted)" : '' %></span>
+
+<%= renderedview %>
+
+<div class='command'>
+	<a href='<%= url page.name, "edit" %>' accesskey="E" >Edit this page</a> or
+	watch for changes using <a href='<%= url page.name, 'rss' %>'>RSS</a>.
+</div>

@@ -1,0 +1,17 @@
+h1. Page.inserted_into is never purged
+
+* Your name:  tamc
+* Soks version: v1.0.0
+* Your operating system:
+* Your version of ruby:
+* Your browser:
+
+h2. And please describe the problem below:
+
+If one page is inserted into another, then it is recorded in an array in the Page class.  If a page is updated, this allows all the other pages that insert it to be refreshed to be up to date.  Unfortunately there is no mechanism to remove this record should the page no longer be inserted.  This isn't a big deal, but will result in unncessary refreshes.
+
+h2. And if you have any suggestions for the cause or a fix, please put it below:
+
+Working on it... (but low priority)
+
+Tag: Include this page in the distribution

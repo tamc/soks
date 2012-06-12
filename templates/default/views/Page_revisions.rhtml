@@ -1,0 +1,36 @@
+<span class='pagename'><a href='<%= url page.name, "meta" %>'><%= page.name %></a> <%= page.deleted? ? "(Deleted)" : '' %></span>
+
+<% start_at_revision = query['revision'] ? query['revision'].to_i : 0 %>
+
+<% if start_at_revision > 0 %>
+	<p><a href='<%= url page.name, "revisions", "?revision=#{start_at_revision-10}" %>' accesskey="N" >Newer revisions</a></p>
+<% end %>
+
+<% page.revisions[start_at_revision,10].reverse_each do |revision| %>
+	<div class="undochange">
+		<p><%= revision.created_on %> by <a href='<%= url revision.author %>'><%= revision.author %></a></p>
+		<ol>	
+		<% revision.changes.each do |change_group| %>
+				<%	change_group.each do |change|
+					case change[0]
+					when "-" %>
+						<li><del><%= change[1] %>. <%= change[2].gsub('<','&lt;').gsub('>','&gt;') %></del></li>
+					<% 	when "+" %>
+						<li><%= change[1] %>. <%= change[2].gsub('<','&lt;').gsub('>','&gt;') %></li>
+					<%	end %>
+				<%	end %>
+		<% end %>			
+		</ol>
+		<form method=post action='<%= url page.name, "rollback" %>' >
+			<input name='revision' value='<%= revision.number-1 %>' type='hidden' />
+			<input name='action' value='Undo the changes above' type='submit' />
+		</form>
+	</div>		
+<% end %>
+
+<% if (start_at_revision+10) < page.revisions.size %>
+	<p><a href='<%= url page.name, "revisions", "?revision=#{start_at_revision+10}" %>' accesskey="O" >Older revisions</a></p>
+<% end %>
+<div class='command'>
+	<a href='<%= url page.name, "edit" %>' accesskey="R" >Return to editing</a>
+</div>

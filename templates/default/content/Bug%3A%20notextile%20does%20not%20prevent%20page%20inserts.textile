@@ -1,0 +1,3 @@
+Page inserts like @[ [insert other page]]@ should not insert another page if they are surrounded by notextile tags (or code, or pre?).  
+
+Tag: Include this page in the distribution

@@ -1,0 +1,3 @@
+It seems that Ruby GEM limits filename lengths, which means there is a limit on title lengths.  It appears to be done so that the files work correctly on the windows platform. 
+
+Tag: Include this page in the distribution

@@ -1,0 +1,32 @@
+h1. Improving the style of this wiki
+
+If you develop any improvements to the layout and style of this wiki, and are willing to share, please send copies to me tamc@rubyforge.com (a zip of the view and attachment directory is probably the best method).
+
+h2. Changing the logo on the right
+
+The logo can be changed by replacing logo.jpg in the in the attachment folder of the wiki you have created ( soks-wiki/attachment/logo.tif by default)
+
+h2. Changing the color scheme
+
+The stylesheet is stored in the attachment folder of the wiki you have created (soks-wiki/attachment/stylesheet.css by default).
+
+h2. Changing the html and layout
+
+The formatting of the wiki is stored in the views subdirectory of the folder in which the wiki was created (soks-wiki/views by default).  These pages are all erb ( www.ruby-doc.org/stdlib/libdoc/erb/rdoc/classes/ERB.html ).
+
+The folder contains:
+* frame.rhtml - This is the bulk of the html and is used to wrap all pages except those ending in 'print' or 'rss'
+* Page_view.rhtml - This is the 'standard' viewing page
+* Page_edit.rhtml - This is the 'standard' editing page
+* Page_revisions.rhtml - This is the 'standard' revisions page
+* Page_rss.rhtml - This attempts to create a rss feed for changes to the page 
+
+You can add a new type of view by creating a new file here ending in rthml, starting with Page and with _viewname in the middle.  E.g. for a new sort of 'doublesize' view you could create Page_doublesize.rhtml.  This would then be accessed by typing /doublesize/pagename as the url. 
+
+Note that you must restart soks for changes to the template to take effect.
+
+h2. Changing the default styles for NEW wikis 
+
+To change the style and layout of new wikis created using the soks-create-wiki.rb command, then edit the 'template' directory of wherever you installed soks.
+
+Tag: Include this page in the distribution

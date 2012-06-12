@@ -1,0 +1,41 @@
+h1. How to import data into a Soks wiki
+
+*The basic question:* How can I import data into Soks?  (both pages and attachments)
+
+I have a table worth of information that I would like to load into my Soks wiki.  Each row of the table will become a page and each row has a PDF file associated with it.
+
+What would be the process of dumping my tabular data in the wiki?  Do I merely need to dump out @.textile@ versions of the pages in the contents directory (properly escaped)?  Do I need the YAML revision companions?  Do I merely dump the PDF files in the @attachments@ directory (with proper @.textile@ files also placed in @contents@)?
+
+So far, I have something like,
+<pre>
+projects.each do |p|
+ name = CGI.escape("2005 ii Proposal: #{p.organization}: #{p.title}")
+ File.open(name+'.textile','w') do |f|
+  f.puts "h2. #{p.title}"
+  f.puts
+  f.puts "|Author:|#{p.author}|"
+  f.puts "|Organization:|#{p.organization}|"
+  f.puts "|FTE:|#{p.fte}"
+  f.puts "|Beneficiary:|#{p.beneficiary}|"
+  f.puts "|Submission:|Attached #{p.proposal.gsub(/\s/,'+').sub(/\..*?$/,'')}|"
+ end
+end
+</pre>
+
+Am I heading in the correct direction? --Bil
+
+Yes.  comments:
+# You don't need to escape the file-names, Soks should detect they are not escaped and correct them.
+# You don't need to create revisions files, Soks will create them automatically.
+# If a revision file exists, but is out of date, Soks will bring the revision file up to date.
+# (I think you have realised this, but just in case) To import the PDFs, you need to both put them in the attachment directory and create a page in the content directory whose name starts 'attached ' and whose content is @/attachment/filenameof.pdf@
+# You can do this while the wiki is running (soks periodically scans the content folder and updates itself with any changes[1]) but if you are adding a lot of files it is best to stop the wiki while the changes are made.
+-- tamc2
+
+An alternative (only appropriate if you plan to update the wiki from the database frequently) would be to write a helper class that you call from start.rb and that uses the @wiki.revise(pagename, content, author) methods.
+
+A third alternative would be to use DRb (e.g. write @require 'drb'@  @DRb.start_service( 'druby://localhost:9001', view)@ somewhere in your start.rb file) and then write a script (or use irb) to remotely call the @wiki.revise( pagename, content, author) methods.
+
+fn1.  Changes detected by looking at the file's timestamp, not its content.
+
+Tag: Include this page in the distribution

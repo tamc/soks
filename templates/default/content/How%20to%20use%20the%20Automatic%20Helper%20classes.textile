@@ -1,0 +1,12 @@
+h1. Automatic Helpers
+
+Soks has a range of helper classes:
+* Automatic summaries - Scan for other wiki pages and create new pages that have lists of relevant pages (e.g. Known Bugs)
+* Automatic counters - Watch for certain events and count them (e.g. most popular pages, most frequent visitor, most prolific author)
+* Automatic importers - Look outside the wiki and do things like mirroring rss feeds, or the contents of an e-mail folder
+* Automatic maintenance helpers - Prune old revisions, merge others, permanently remove deleted pages etc.
+* Automatic exporters - Take data from the wiki and put it elsewhere.
+
+The api for classes to modify the wiki is pretty simple, so you should be able to create what you want pretty quickly.
+
+Tag: Include this page in the distribution

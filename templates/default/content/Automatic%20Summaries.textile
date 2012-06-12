@@ -1,0 +1,40 @@
+h1. Automatic Summaries
+
+In lib/helpers/default-helpers.rb you will find an AutomaticSummary class, and its subclasses AutomaticList and AutomaticDetailedList.  This uses the [[api => api for classes to modify the wiki ]] to watch for changes to the wiki, and if the page that is changed matches a given regexp, adds it to a summary page.
+
+You can use it by creating a line in your soks-wiki/start.rb file of the form @AutomaticSummary.new( wiki, settings ) { |page| page.name =~ /Something you are interested in/ }@ where settings can be (defaults shown):
+
+<pre>
+<code>
+DEFAULT_SETTINGS = {
+		:max_pages_to_show => nil,
+		:description => 'This summary was created automatically',
+		:author => 'AutomaticSummary',
+		:lines_to_include => 10,
+		:sort_pages_by => :created_on, # Could be :revised_on or :score or :name or :name_for_index, or :author
+		:reverse_sort => false,
+		:event => :page_created, # Only summarises new pages. :page_revised would summarise changed pages
+		:remove_deleted_pages => true, # If false will keep references to deleted pages
+		:summarise_revisions => false, # If true will list revisions rather than pages
+		:merge_revisions_within => false, # If set to a number, repeats with the same author within that many seconds will be merged
+	}
+</code>
+</pre>
+
+h2. Examples
+
+Four examples of its use, included in the default start.rb file are:
+
+<pre>
+<code>
+	AutomaticDetailedList.new( wiki, 'Known bugs' ) do |page|
+		page.name =~ /^Bug:/i && page.name !~ /^Bug: Type a title here/i
+	end
+	
+	AutomaticList.new( wiki, 'Instructions and Howtos' ) { |page| page.name =~ /^How to /i }
+	AutomaticSummary.new( wiki, 'Latest News', :max_pages_to_show => 1, :reverse_sort => true) { |page| page.name =~ /^News:/i }
+	AutomaticSummary.new( wiki, 'All News', :reverse_sort => true) { |page| page.name =~ /^News:/i }
+</code>
+</pre>
+
+Tag: Include this page in the distribution

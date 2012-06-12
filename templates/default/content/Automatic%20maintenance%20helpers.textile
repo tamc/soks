@@ -1,0 +1,39 @@
+h1. Automatic Maintenance Helpers
+
+These help with some basic wiki maintenance tasks:
+
+h2. Delete Old Pages Helper
+
+This permanently deletes deleted pages.
+
+To use, put the following in your start.rb file:
+# @require 'maintenance-helpers'@
+# @DeleteOldPagesHelper.new(wiki)@
+
+This will by default scan the wiki once per day and permanently delete pages that have been marked for deletiob for more than 100 days.
+
+It has two optional parameters: @DeleteOldPagesHelper( event_to_check_on, age_to_wipe_at)@, the first can be :min, :hour, :day, ;month, :year and the age is in seconds.
+
+h2. Delete Old Revisions Helper
+
+This permanently deletes old revisions.
+
+To use, put the following in your start.rb file:
+# @require 'maintenance-helpers'@
+# @DeleteOldRevisionsHelper.new(wiki)@
+
+This will by default scan the wiki once per day and permanenty delete revisions that are more than a hundred days old, being sure to leave at least 20 revisions on a page.
+
+It has three optional parameters @DeleteOldRevisionsHelper(( wiki, event_to_check_on = :day, age_to_wipe_at = 60*60*24*365, minimum_revisions = 20 )@ the first can be :min, :hour, :day, ;month, :year and the age is in seconds.
+
+h2. Merge Old Revisions Helper
+
+By default this wakes up each hour and merges all revisions more than 24 hours old, by the same author, and that are created within an hour of each other.
+
+To use, put the following in your start.rb file:
+# @require 'maintenance-helpers'@
+# @MergeOldRevisionsHelper.new(wiki)@
+
+It has three optional parameters @DeleteOldRevisionsHelper(( wiki, eevent_to_check_on = :day, minimum_age_to_merge = 60*60*24*365, maximum_time_between_revisions_for_merge = 60*60 )@ the first can be :min, :hour, :day, ;month, :year and the age and time are in seconds.
+
+Tag: Include this page in the distribution

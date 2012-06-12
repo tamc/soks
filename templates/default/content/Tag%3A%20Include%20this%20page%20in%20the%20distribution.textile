@@ -1,0 +1,6 @@
+h1. Tag: Include this page in the distribution
+
+Pages with this text on are downloaded from http://www.soks.org and packaged up in the soks distribution.
+
+
+[[insert pages to include in the distribution]]

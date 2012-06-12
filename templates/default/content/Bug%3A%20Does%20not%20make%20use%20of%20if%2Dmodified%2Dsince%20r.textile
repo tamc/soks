@@ -1,0 +1,3 @@
+Currently tells the browser to not cache any page.  This is wasteful of bandwidth and increases server load.  Should handle the if-modified-since request headers to return 'not modified' messages instead.
+
+Tag: Include this page in the distribution

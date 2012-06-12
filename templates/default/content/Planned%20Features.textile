@@ -1,0 +1,72 @@
+h1. Planned Features
+
+For features that are planned for the next release or two, see the to do list.
+
+h2. Features in v1.1.0
+
+* A way of storing and using meta-data about each page
+* Pages should not link to themselves because it's confusing. See the Ruby page. -- At one point they didn't.  I wonder when this crept back in. (When you forgot to add a test?  ;) --Bil).  This is done (and there is a test for it!).
+
+h2. Features in v1.2.0
+
+* A way of editing by paragraph as well as page, which would help avoid edit conflicts.
+
+h1. Desired Features
+
+Add what you would like to see, or email the author: 
+
+* Move the wiki name and logo, important pages, search box, and navigation links to a top navigation, similiar to Instiki, to make the important links easier to spot. 
+* Some method of avoiding edit conflicts
+** Page locking like Instiki would be okay, but paragraph locking once editing by paragraph is added would be better.
+* Have a h1 with the page's title automatically sent to browsers, rather than requiring it to be added and update seperately.
+* Analysis of text to avoid linking commonly used words (because maintaining a list of common words to avoid auto-linking seems like a kludge, and will make translation more difficult if/when that happens), and perhaps automatic categorization of pages: the "Ruby Classifier library":http://classifier.rufy.com/ using Latent Sematic Analysis may help, by avoiding autolinking to any pages whose titles are "uninteresting".
+** Downside: this would use more memory and processor cycles
+* Redirects with greedy matching: example, redirect ruby programming language, to ruby.
+* Case insensitive URLs: for instance, /view/home-page instead of /view/HomePage (make one redirect to the other?)
+** At the moment you may also use /view/home page (with the space) in many browsers.
+* Flesh out the RSS feed:
+** (Remove the logo and search box?)
+** Replace the <notextile>* [[ page title ]]</notextile> asterisk and brackets with quotation marks? --Bil
+* Fast CGI or the like as an alternative to Webrick
+* Give each automaticsummary a unique name so several can update the same page
+* Some form of tag to automatically create automatic summaries.
+* Give commands to gracefully start and stop it.
+* I was going to make a suggestion, then I noticed that something like it had been added and deleted. Perhaps some explanitory text explaining what has already been suggested or what is or is not acceptable would be a good idea? - Sorry. A mistake on my part.  Please do make your suggestion again, and I won't delete any in future - tamc2
+** I think a generalized way of extending soks to be very much more dynamic would be allowing dirt-simple extensions. One way would be to put a @scripts@ directory in parallel with @attachment@ and extend @insert@ to then include the output of the script. So something like @[ [insert script helloworld blah ] ]@ would run helloworld.rb with the argument blah and the output would get pasted right into the wiki page. What do people think? --Skorgu
+** Interesting, what types of script did you have in mind?  The only challenge I can see is deciding how frequently to call the script to update the page, every time the page is viewed? or every time it is editted? or somewhere in between? what do you think? -- tamc
+** I'd say call the script each time the page is updated and let the script handle any sort of caching. The situation I had in mind is something like this: I have a page on Soks that has my frequently-loaded websites that I use as a start page. I'd like it if, instead of just saying "Red Handed":http://redhanded.hobix.com it said "Red Handed":http://redhanded.hobix.com (Last Post "Killer Hobix Tutorial...":http://redhanded.hobix.com/inspect/killerHobixTutorialInEnglishAndFrench.html ) and have the script pull the RSS and just update that. A more ambitious project would pull a list of URLs from say del.icio.us with tag "feed" or something and generate the link list itself. Once the capability exists to pipe script output into the wiki, everything else can be handled in those scripts. --Skorgu
+* Making the automatic linking only link one occurance of a title per page.  Currently can end up with far too many links to the same place on the same page.
+* A setting in start.rb to switch between Soks-style freeform pagenames and Instiki-style autolinks --Skorgu
+** By this, do you mean that you would like the option to have a WikiWord create a link? If so sounds possible as an option, although I personally dislike them! -- tamc 
+** I like the freeform linking, but there is one huge problem: if I'm writing a page and I decide that I want to add a link to a non-existant page, I need to either @[ [Double Bracket] ]@ it or click Add New Page, type the name, remember if I used a space or not, and then write my content. In Instiki, if you just write CamelCase it creates a link to the 'create this page' form with the title filled in and everything. Maybe keep the freeform linking but have an option to enable auto-linking for wiki words? --Skorgu
+** Ok, I'll look into it.  By the way, another way of doing this (if your browser supports this) is to highlight the text you wish to link and press ctrl-n. --Tom
+* Perhaps a category helper? To index references to particular key words
+* Perhaps the default layout should have a little table of contents menu like wikipedia pages, e.g., the thing labeled 'contents' at http://en.wikipedia.org/wiki/Wiki. If you create a long page with several headings, it creates a little table of contents at the top so you can leap down the page quickly.
+* The following came from one our site's users.  It would seem contrary to the basic architecture of this wiki engine.  However, it would be nice to be notified somehow of how many or which pages were going to have their links deactivated or altered... --Bil
+** It would be nice if I changed the name of a page that had other pages linked to it, that I could have the option of changing all of the linked pages to it automatically. --Bil
+* Add a facility to use trackbacks on wiki pages so that can see other sites that link to that page. http://www.sixapart.com/movabletype/docs/mtmanual_trackback.html --tamc2
+* I think this http://tool-man.org/examples/edit-in-place.html would be great.  Double click on a paragraph and edit it in place!  Unfortunately his code only works on some browsers... --tamc2
+** That demo is absolutely gorgeous. It would be obscenely cool to implement soks as an AJAX or whatever we're calling it today frontend a la gmail/google maps etc. It seems that some work is being done to integrate that into rails, so maybe they could both be integrated at once? Another benefit to rails-izing is moving away from WEBRick as the only frontend. "lighttpd":http://bigbold.com/snippets/posts/show/175 apparently plays well with rails --Skorgu
+* Victor Ng-Thow-Hing asked by email about adding rich media (e.g. movies, svg etc) to the wiki.  Can currently upload them as files and link to them, but I'll have a think about how to extend textile to allow movies etc to be embedded.  --tamc2
+
+Suggestions in an email from Seb Clediere copied here
+* Multi-wiki. Have you thought about several wikis? Like instiki where you can setup several wikis? -- See also [[ kleb's email => [soks] Sub wikis ]].
+* Flat hierarchy. With the wiki content growing in size, I am wondering about having a directory hierarchy in the wiki, rather than a flat one. And perhaps there would be not need for a separate attachement and content. (Hieraki are doing something along a hierarchical wiki http://demo.hieraki.org)
+* I had a brief look at a new comer: MiniRubyWiki. I don't like it at all, but the guy add a very good idea: integrate graphziz/dot to it, so it is easy to add somes graphs to the text. Very good.
+** I'll have to take a look.  I am curious whether Graphviz/dot was used for displaying (and navigating) the meta-page link connections like "TheBrain":http://www.thebrain.com or something else? --Bil
+
+Also considering these bigger changes (interested in your thoughts):
+* Making the automatic linking ignore punctuation.  Only the words in page titles would be significant, so "Bug: A bug" would be treated the same as "Bug- A bug" -- tamc
+* Making the automatic linking link to 'similarly' title pages. e.g: If you have a page called "Page One" and another called "Page Two" all instances of the word "One" in "Page Two" would link to "Page One".  Would add a lot of processing, but might allow distinct namespaces. -- tamc
+
+h2. Adopted features
+
+These are suggestions that were above and have been implemented (at least in the CVS version) or are on the to do list.
+
+* Flesh out the RSS feed
+** Have the item content render the most recent change information like that shown at the bottom of an edit page
+** Have the source link be the "view" view and not the "rss" view.
+* Make the wiki fork (possible by changing a setting in the start.rb file)
+* There was a guy on comp.lang.ruby wanted to do a link in instiki to a file, exactly what I have done in soks with the few lines of code I sent you a while ago in fact.  (My mistake in not including this code sooner, I will put it in the next release, sorry! -- tamc2)
+
+Tag: Include this page in the distribution

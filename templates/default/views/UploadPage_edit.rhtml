@@ -1,0 +1,63 @@
+<span class='pagename'>
+	<a href='<%= url page.name, "meta" %>'><%= page.name %></a> 
+	<%= page.deleted? ? "(Deleted)" : '' %>
+</span>
+
+<a class='help' onclick='document.getElementById("tips").style.display = (document.getElementById("tips").style.display == "block") ? "none" : "block";' >Click me for help</a>
+	
+<div id='tips' style='display: none;'>
+	<p>To add a file or picture, click on the 'choose file' or 'browse...' button below, select the file you wish to add, then give it a meaningful title in the title box.  Note that the title can be a sentence, e.g. "claim form" or "a beautiful balloon", and does not need to have an extension.</p>
+	<p>You can put add a link to the file from another page in the wiki by typing its title (e.g. "attached claim form").  To make a picture appear as part of another page write [[ insert picture name ]] (e.g. [[insert picture of a beautiful balloon]]).</p>
+</div>
+
+<form  class='editpage' action='<%= url page.name, "upload" %>' method='post' enctype='multipart/form-data' >
+	<div id='fileedittitle'>
+		Title: 
+		<% if page.is_a? ImagePage %>
+			<input type=hidden name='titleprefix' value='Picture of ' />
+			Picture of <input name='newtitle' size = '51' value='<%= page.name[ 10..-1].strip %>'  
+		<% else %>
+			<input type=hidden name='titleprefix' value='Attached ' />
+			Attached <input name='newtitle' size = '52' value='<%= page.name[ 9..-1].strip %>' 
+		<% end %>
+		onBlur="validateTitle( this.value );"  onClick="this.value=this.value.replace('Type a title here','')" />
+	</div>
+	
+	<div id='fileeditfile'>		
+		<input name='file' type=file  /></td></tr>
+	</div>
+	
+	Hello <a href='<%= url person %>'><%= person %></a> (Quit browser to log out). Would you like to 
+	<input name='action' value='Save Changes' type='submit' accesskey="S" /></form>,  
+	<form class='editpage' method='post' action='<%= url page.name %>' >
+		<input name='action' value='Cancel Changes' type=submit accesskey="C" />
+	</form> or
+	<form class='editpage' method='post' action='<%= url page.name, 'delete' %>' >
+		<input name='action' value='Delete this Page' type='submit' accesskey="D" />
+	</form>?
+
+
+<% unless page.empty? %>
+	<div class='change'>
+		<h2>The most recent change was made by <a href='<%= url page.author %>'><%= page.author %></a> who changed:</h2>
+			<% 
+			page.changes.each do |change_group|
+				change_group.each do |change|
+					case change[0]
+					when "-" %>
+						<del><%= change[1] %>. <%= change[2] %></del><br />
+			<% 	when "+" %>
+						<%= change[1] %>. <%= change[2] %><br />
+			<%		
+					end
+				end
+			end
+			%>
+	</div>
+	<p>
+		<form class='editpage' method=post action='<%= url page.name, "rollback" %>' >
+			<input name='revision' value='<%= page.number-1  %>' type='hidden' />
+			<input name='action' value='Undo this change' type='submit' accesskey="U" />
+		</form> or <a href='<%= url page.name, "revisions" %>' accesskey="A" >Show <b>A</b>ll changes</a>.
+	</p>
+<% end %>

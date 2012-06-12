@@ -1,0 +1,45 @@
+h1. How to get the latest Soks from cvs
+
+Note.  Soks now uses Darcs rather than CVS for development.
+
+If you can't wait for the next release of Soks, then you can get a copy out of the source control system.  Note that the cvs copy of Soks *{color:red}may have serious bugs*, so please don't try and upgrade a running site with it. 
+
+There are now three repositories:
+* [[Soks-stable => changes to soks-stable]], that contains code that has been, or will shortly be, released.
+* [[Soks-testing => changes to soks-stable]], that contians code that will probably make it to the next release.  www.soks.org uses the code from here.
+* [[Soks-development => changes to soks-development]], that contains ideas and experiments.
+
+There is a repository browser at http://www.counsell.org/darcs.
+
+h2. Just download and go
+
+I will try and maintain an up to date tar.gz copy of the repositories.  Unfortunately, until I find a way to hook into Darcs to create this on every change, it may not be 100% up to date.
+
+# @wget http://www.counsell.org/darcs/soks-stable/soks-stable.tar.gz@
+# @tar -xvzf soks-stable.tar.gzip@
+# @cd soks-stable@ and play
+
+Substitute soks-development or soks-testing for soks-stable if you require a different version.
+
+h2. Using Darcs
+
+Steps:
+# If you don't have a copy of darcs, get it from www.darcs.net
+# Go into a terminal
+# @cd wherever_you_want_to_download_soks_to@
+# @darcs get http://www.counsell.org/darcs/soks-stable@
+# @cd soks-stable@ and play.
+
+To update a repository you allready have:
+# @cd wherever_you_downloaded_soks@
+# @darcs pull http://www.counsell.org/darcs/soks-stable@
+# Note, you can use this to pull specific patches from different versions of soks.
+
+To send me a patch:
+# @cd wherever_you_downloaded_soks@
+# @darcs record@ to save your changes to your local copy
+# Send it to me:
+** @darcs send@ if your machine and firewall are configured so that sendmail works.
+** @darcs send -o=patch-file.txt@ then e-mail darcs@soks.org with the patch-file attached.
+
+Tag: Include this page in the distribution

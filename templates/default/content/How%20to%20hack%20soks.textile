@@ -1,0 +1,66 @@
+h1. How to hack soks
+
+Here are some pointers to help you figure out where to make whatever changes and improvements you desire.  Soks's licence is liberal, so please do whatever you want, but I would appreciate any improvements you can send me ( tamc@rubyforge.com ).
+
+* bin - contains the soks-create-wiki.rb file
+* contrib - contains code from other people.  Currently Redcloth and Diff:LCS 
+** _Could these dependencies be resolved directly by RubyGems in future Soks releases?_
+** They _could_, but I'd have to figure out how to make rake package the gem differently from the zip and tgz file, so it has seemed simpler just to include them for now.
+* lib - contains the soks code
+* template - contains the defaults used by soks-create-wiki.rb when creating a new wiki.  This folder is copied over, and the show.rb template filled out.
+
+h2. template
+
+* start.rb - contains the default ruby file used by soks-create-wiki.rb, this is written using erb
+* attachments - contains the stuff that will be statically loaded when running a wiki, such as images and stylesheets. In particular you may want to replace logo.png
+* views - contains the default templates see Improving the style of this wiki for a few notes on this
+* content - contains the initial content for the wiki.  The .textile files are flatfile text files containing the textile for a page.  The title of the page is the filename (and has usually been url_encoded).  Any .yaml files in here contain arrays containing the change history of the page
+* version - contains the version number of this wiki.  Used by soks-create-wiki.rb to see if it needs upgrading.
+
+h2. lib
+
+* soks.rb - Just requires all the other files
+* soks-utils.rb - Contains various utility classes, EventQueue, Notify and some extensions to String to url_encode and decode
+* soks-storage.rb - Contains a module which is mixed into the Wiki class to allow it to be saved
+* soks-model.rb - Contains the model of the wiki: Wiki, Page and Revision
+* soks-view.rb - Contains the classes that turn the wiki into html: View, WikiRedCloth, Links, RollingMatch
+* soks-servlet.rb - Contains the webrick server that passes commands to and from the View object
+* soks-default-helpers.rb - Contains optional classes that a Wiki can load to provide added functionality.  These are called when changes are made to the site.  They include: AutomaticUpdateCrossLinks, AutomaticRecentChanges, AutomaticOnePageIndex, AutomaticMultiPageIndex, AutomaticSummary, AutomaticCalendar and AutomaticUpcomingEvents.
+* authenticators.rb - Contains some extra authenticators to extend those already provided by Webrick. Namely  NotAuthentication and OnePasswordAuthentication
+
+h3. soks-utils.rb
+
+* Notify - This is an improvement on the Observable mix-in. 
+* EventQueue - This is used by Notify to inform observers in sequence of an event taking place, while allowing the original triggering class to continue.
+
+h3. soks-model.rb
+
+A Wiki class has many Page classes which have many Revision classes.  ImagePage and AttachmentPage are subclasses of Page that return different textile.
+
+The Wiki class decides what type of page to create based on its name.  All AttachmentPage pages have names that start with 'Attached ', all ImagePage pages have names that start with 'Picture of'. This is defined in the @page_classes instance variable of the Wiki class.
+
+The Wiki loads all the pages from file into a hash.  When pages are changed it writes a copy to disk immediately.  It has a thread that watches the disk for any changes to the files.
+
+h3. soks-view.rb
+
+The View object does the business.  It is called by the soks-servlet, and then proceeds to call an appropriate method on the Wiki model. It may then Notify any observing AutomaticHelpers of any changes, before proceeding to render the html.  This rendering happens in two places: First the Page.textile is turned into html by WikiRedCloth. then an appropriate ERB file is loaded and called.
+
+The WikiRedCloth overrides the to_html method of redcloth to add a number of methods that do the automatic page insertion and automatic linking. The automatic linking is actually carried out in the RollingMatch class. A record of the links between pages is kept in the Links class and then written to each page object.  
+
+The ERB files are loaded from disk.  The appropriate erb file is selected by looking for the pattern ClassName_viewname.rhtml (e.g. Page_edit.rhtml). If that page doesn't exist then the process is repeated with the Page's superclass.  The ERB files are cached.
+
+h3. soks-servlet.rb
+
+This runs a Webrick server to interact with the user.   The server can be stopped by sending an interupt (ctrl-c).
+
+The server has two handlers, a WEBrick::HTTPServlet::FileHandler for doing the dynamic content (which is attached to any url starting in /attachment/) and a WikiServlet for the dynamic content.
+
+The WikiServlet service method takes a look at the request url. If it is '/' it redirects to '/view/Home Page'.  If it only has one slash in it (e.g. '/Home Page') then it assumes that it is equivalent to '/view/Home Page'. If it has two or more slashes in it (e.g. '/edit/Home Page' ) then it splits the url into a command ('edit') and the rest ('Home Page'). If the WikiServlet responds to doCommand (e.g. doEdit) then control is passed to that method.  Otherwise it is assumed the command is the name of a view (e.g. 'print') and is therefore passed as is to the View object. 
+
+The WikiServlet deals with file uploads by separately writing the uploaded file to the 'attachments' directory and also asking the 'View' object to create or revise an ImagePage object whose content is the filename of the uploaded file. 
+
+h4. soks-default-helpers.rb
+
+These are a series of classes that may be optionally loaded by a wiki's start.rb script. They receive notifications of page changes from the View object and can use this information to update other pages in the wiki. See automatic summaries for a little more detail.
+
+Tag: Include this page in the distribution

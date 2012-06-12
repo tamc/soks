@@ -1,0 +1,57 @@
+<%=
+require "rss/maker"
+
+RSS::Maker.make("2.0") do |maker|
+  	
+  	maker.encoding = 'iso-8859-1'
+  	
+  	maker.channel.title = "#{name} #{page.name}"
+	maker.channel.description = description
+	maker.channel.link = root_url
+
+	maker.image.title = name
+	maker.image.url = file "logo.png"
+
+	maker.textinput.title = "Search"
+	maker.textinput.description = "Search #{name}'s text"
+	maker.textinput.name = "regex"
+	maker.textinput.link = url('searchpage','find')
+
+	maker.items.do_sort = true
+
+	count = 0
+	page.revisions.reverse_each do |revision|
+		break if (count +=1) == 15
+		item = maker.items.new_item
+		item.link = url(page.name)
+		# Get the first change that makes an addition and use as the title
+		title = nil
+		revision.changes.each do |group|
+			group.each do |type,line,text|
+				if type == '+' && text != ''
+					title = text.gsub(/<.*?>/,'')
+				end
+				break if title			
+			end
+			break if title
+		end
+		# If change found, take just the changed text and remove tags.
+		# If no change found, then must be because only deleted stuff so give that message
+		item.title = title || $MESSAGES[:some_content_has_been_deleted] # Default			
+		item.date = revision.created_on
+		item.author = revision.author
+		item.description = ""
+		content_deleted = false
+		revision.changes.each do |change_group|
+			change_group.each do |change|
+				case change[0]
+				when "-"; content_deleted = true
+				when "+"; item.description << "#{change[2]}<br />"
+				end
+			end
+			item.description << "&#8230;<br />"
+		end
+		item.description << "Content was also deleted" if content_deleted
+	end
+end
+%>

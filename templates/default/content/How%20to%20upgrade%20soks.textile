@@ -1,0 +1,32 @@
+h1. How to upgrade
+
+First download the latest release of soks:
+
+Preferably:
+# Install rubygems from http://rubyforge.org/projects/rubygems/
+# @gem update Soks@ (you may need to be root first)
+
+Alternatively
+# Download the tar or zip file from http://rubyforge.org/projects/soks/
+# Unzip or untar it
+# Change into the soks directory
+
+h2. This will always work...
+
+Then execute the command. 
+
+# @soks-create-wiki.rb --destination-dir=path/to/your/wiki@ and it will guide you through the upgrade.
+
+If you haven't touched your start.rb file, then you are good to go.  Otherwise you will need to edit the new start.rb file in your wiki to your tastes, the way this is set up changed substantially in v1-0-0, but it should be clear enough.
+
+Should anything go wrong, or you need to revert, a pristine copy of your wiki is created in YourWikiName-bak-0.
+
+h2. But this is quicker if it is only a minor upgrade
+
+If your wiki is v1-0-0 or above then I have changed the version numbering system, so that if the version you wish to upgrade to only changes the last digit, you don't need to go through the full upgrade.
+
+If you use gems, then your wiki should automatically use the new version next time you start it.  Otherwise edit start.rb in your wiki to point to the new version of soks that you downloaded.
+
+Note that I may make minor improvements to the way the wiki looks, which will not appear in your wiki if you follow this method.  If you want to make sure they do, copy the contents of the soks/templates/default/views directory to your soks-wiki/views directory. 
+
+Tag: Include this page in the distribution

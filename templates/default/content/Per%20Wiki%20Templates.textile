@@ -1,0 +1,37 @@
+h1. Per Wiki Templates
+
+When you create a new wiki with the soks-create-wiki command, it copies the contents of path-to-soks-installation/templates/default into a new folder called soks-wiki.  
+
+If you change anything in the soks-wiki folder (see 'how to change the way this wiki looks' for ideas and tips) then it will apply to that wiki only.
+
+If you wish to create a default set up for future wikis:
+# Change a running wiki into a form that you find useful,
+# Create a new folder under path-to-soks-installation/templates/ e.g. path-to-soks-installation/templates/yourtemplate
+# Copy the contents of your running wiki to this new folder
+# (Optional) edit the path-to-soks-installation/templates/yourtemplate/start.rb file to allow the port, url, name etc to be set from the soks-create-wiki command (see the  path-to-soks-installation/templates/default/start.rb for ideas on how to do this)
+
+You can then use this template to create future wikis by using the --template option of the soks-create-wiki.rb command. e.g. @soks-create-wiki.rb --template yourtemplate@
+
+----
+
+I'm still confused as to exactly what templates are doing and why/when I would use them.  In other words, what's a typical use case?  --Bil
+
+So, the use I imagine is so that I a user of Soks might wish to be able to quickly deploy (by @soks-create-wiki.rb --template frenchwiki@)...
+# An internal team wiki
+# An external public wiki
+# A wiki that looks just like other wiki X
+# A French localised wiki
+# A wiki that acts like a blog and no more
+
+...Each with a diffent look and feel, different default automatic summaries, default authentication, with or without a calendar by default, etc.. etc... --tamc2
+
+What do the currently supplied instiki, default, and someother templates do for me?  (_Still_ dense on this topic.) --Bil
+
+For you?  Probably nothing!  They just show how can have a different look and feel.  The default, instiki and rails layouts are just the three different layouts I originally considered for Soks[1]:
+* Default has the content on the left, and the links etc on the right
+* Instiki has the links and control stuff at the top and bottom, with the content centered in the middle. Looks a lot like http://www.instiki.org
+* Rails has a big logo bar at the top, the content on the right, and the links etc on the left.  Looks a lot like http://wiki.rubyonrails.com
+
+fn1. I've only been updating the default template recently. 
+
+Tag: Include this page in the distribution

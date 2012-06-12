@@ -1,0 +1,33 @@
+h1. How to install Soks
+
+h2. Requirements
+
+# Essential: Ruby 1.8.2 from http://www.ruby-lang.org/en/
+# Preferred: Ruby Gems from http://rubyforge.org/projects/rubygems/
+
+h2. The easy install
+
+If you have ruby gems, type:
+
+@gem install Soks@
+
+then
+
+@soks-create-wiki.rb@ (Gems should have installed this in your path so you can type it anywhere, if it hasn't, look in your ruby library under @gems/Soks-X.X.X/bin/@ )
+
+...and then surf to http://localhost:8000
+
+h2. The harder install
+
+Download the latest version of Soks from http://rubyforge.org/frs/?group_id=481
+
+<pre>
+<code>
+tar -xvzf Soks-x.x.x.tgz
+ruby Soks-x.x.x/bin/soks-create-wiki.rb
+</code>
+</pre>
+
+...and then surf to http://localhost:8000
+
+Tag: Include this page in the distribution

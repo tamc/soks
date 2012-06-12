@@ -1,0 +1,7 @@
+h1. Automatic linking
+
+Any reference to the title of another page in the wiki will be automatically linked.  e.g. home page is linked to the home page.  The longest possible links are made first.
+
+The easiest way to create a new page (if your browser supports it - I can only positively say that Safari does) is to highlight the text you want to link from and press ctrl-n. 
+
+Tag: Include this page in the distribution

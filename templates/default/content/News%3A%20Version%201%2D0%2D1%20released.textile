@@ -1,0 +1,12 @@
+h1. Version 1-0-1 released
+
+This is a minor bugfix release.  See how to install soks, or how to upgrade soks for instructions.  There is a full list of changes but in brief, this fixes:
+
+* Fixed bug: Wrong title in Result Search page
+* Fixed bug: AutomaticSummary does not reflect changes to summarised pages
+* Fixed bug: Does not redirect pages with no view
+* Fixed bug: E-mail addresses with hyphens not recognised
+
+However, there are still plenty of known bugs, although none of them should cause much problem day to day.
+
+Tag: Include this page in the distribution

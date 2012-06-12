@@ -1,0 +1,16 @@
+h1. The Author
+
+Soks was written by Tom Counsell.  He can be reached at tamc@rubyforge.org.  
+
+h2. Thanks to
+
+* Pavel Sykora for a fix to the print stylesheet.
+* Bil Kleb for new page categories, meta page improvements and many other suggestsions.
+* Sebastien Clediere for a patch to fix uploads on windows and other bugfixes
+* Giovanni Ferro for a patch to allow soks to be used from a memory stick 
+* Guillaume Marcais for table of contents code for RedCloth
+* _why for the RedCloth library
+* Austin Ziegler for the Diff:LCS library
+* Matz and ruby-core for the ruby language
+
+Tag: Include this page in the distribution

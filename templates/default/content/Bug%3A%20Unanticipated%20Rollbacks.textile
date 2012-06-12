@@ -1,0 +1,23 @@
+Bil Kleb reports:
+
+bq. Unfortunately, I don't have any diagnostic data at
+this point, but I have noticed on 3 occasions
+that my home page has been rolled back to the previous
+version when I restart WEBbrick (or when I moved the
+Wiki to a new location/machine?).
+
+I haven't seen this happen, but data loss is a very bad thing, so I would really appreciate any reports anyone has.
+
+If it happens, could you let me know:
+
+# Is it only ever the home page?
+# If you look at the the revisions (edit, show all changes) does it show that the page has been rolled back, or just that the most recent edit never happened at all?
+# If you look at the content/Home%20Page.yaml file, does it show that the most recent edit ever happened?
+# Which version of the page does the content/Home%20Page.textile file contain?
+# Are the timestamps of the Home%20Page.textile and Home%20Page.yaml files wildly different?
+
+Thanks
+
+tamc2
+
+Tag: Include this page in the distribution

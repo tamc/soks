@@ -1,0 +1,39 @@
+<span class='pagename'><a href='<%= url page.name, "meta" %>'><%= page.name %></a> <%= page.deleted? ? "(Deleted)" : '' %></span>
+
+<%
+if query['time'] 
+	final_revision = page.revisions.detect { |revision| revision.created_on.to_i >= query['time'].to_i }
+	final_revision_number = final_revision.number if final_revision
+end
+final_revision_number ||= ( query['revision'] || page.number ).to_i
+final_revison_number = page.number if final_revision_number > page.number
+final_revision ||= page.revision( final_revision_number )
+%>
+
+<h1>Revisions made by <%= final_revision.author%> up to <%= final_revision.revised_on.strftime('%H:%M %a %d %b %Y') %></h1>
+
+<p>Note, if you wish to edit or undo these revisions, please follow the links from <a href='<%= url page.name, 'edit' %>'>here</a>. You cannot do it from here, becuase someone may have edited the page more recently and because you may need a password to edit the page.</p>
+
+<% final_revision_number.downto(0) do |number| %>
+	<% revision = page.revision( number ) %>
+	<% break unless revision.author == final_revision.author %>
+	<div class="undochange">
+		<p><%= revision.created_on.strftime('%H:%M %a %d %b %Y') %></p>
+		<ol>	
+		<% revision.changes.each do |change_group| %>
+				<%	change_group.each do |change|
+					case change[0]
+					when "-" %>
+						<li><del><%= change[1] %>. <%= change[2].gsub('<','&lt;').gsub('>','&gt;') %></del></li>
+					<% 	when "+" %>
+						<li><%= change[1] %>. <%= change[2].gsub('<','&lt;').gsub('>','&gt;') %></li>
+					<%	end %>
+				<%	end %>
+		<% end %>			
+		</ol>
+	</div>		
+<% end %>
+
+<div class='command'>
+	<a href='<%= url page.name %>' accesskey="V" >View</a>, <a href='<%= url page.name, "edit" %>' accesskey="E" >Edit</a> or <a href='<%= url page.name, "revisions" %>' accesskey="R" >see all changes to</a> this page.
+</div>

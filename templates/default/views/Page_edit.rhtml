@@ -1,0 +1,79 @@
+<span class='pagename'>
+	<a href='<%= url page.name, "meta" %>'><%= page.name %></a> 
+	<%= page.deleted? ? "(Deleted)" : '' %>
+</span>
+
+<a class='help' onclick='document.getElementById("tips").style.display = (document.getElementById("tips").style.display == "block") ? "none" : "block";' >Click me for help</a>
+	
+<div id='tips' style='display: none;'>
+	<ul>
+		<li>h1. big heading (make sure it is followed with a blank line)</li>
+		<li>h2. little heading (make sure it is followed with a blank line)</li>
+		<li>*bold text* = <b>bold text</b></li>
+		<li>_italic text_ = <i>italic text</i></li>
+		<li>* bullet one = &#8226; bullet one<br />
+			 * bullet two = &#8226; bullet two</li>
+		<li># list one  = 1. list one<br />
+			 # list two  = 2. list two</li>
+		<li>Most links are automatic</li>
+		<li>[[insert picture of title of picture]]</li>
+		<li>[[insert attached word document]]</li>
+		<li><a href='http://hobix.com/textile/quick.html' target='textile_ref'>Full Instructions</a></li>
+	</ul>
+</div>
+	
+<form class='editpage' method='post' action='<%= url page.name, "save" %>' >
+	<fieldset>
+	
+	<div id='edittitle'>
+		Title: 
+		<input 	name='newtitle' 
+					size = '60' 
+					value='<%= page.name %>' 
+					onblur="validateTitle( this.value );" 
+					onClick="this.value=this.value.replace('Type a title here' ,'')"
+		/>
+	</div>
+	
+	<div id='editcontent'>
+		<textarea 	name='content' 
+						rows=30 
+						cols=65   
+						onfocus="if( this.value == 'Type what you want here and click save' ) { this.value = '' }" ><%= page.content %></textarea>
+	</div>
+	
+	</fieldset>
+	
+	Hello <a href='<%= url person %>'><%= person %></a> (Quit browser to log out). Would you like to 
+	<input name='action' value='Save Changes' type='submit' accesskey="S" /></form>,  
+	<form class='editpage' method='post' action='<%= url page.name %>' >
+		<input name='action' value='Cancel Changes' type=submit accesskey="C" />
+	</form> or
+	<form class='editpage' method='post' action='<%= url page.name, 'delete' %>' >
+		<input name='action' value='Delete this Page' type='submit' accesskey="D" />
+	</form>?
+
+<% unless page.empty? %>
+	<div class='change'>
+		<h2>The most recent change was made by <a href='<%= url page.author %>'><%= page.author %></a> who changed:</h2>
+			<% 
+			page.changes.each do |change_group|
+				change_group.each do |change|
+					case change[0]
+					when "-" %>
+						<del><%= change[1] %>. <%= change[2] %></del><br />
+			<% 	when "+" %>
+						<%= change[1] %>. <%= change[2] %><br />
+			<%		
+					end
+				end
+			end
+			%>
+	</div>
+	<p>
+		<form class='editpage' method=post action='<%= url page.name, "rollback" %>' >
+			<input name='revision' value='<%= page.number-1  %>' type='hidden' />
+			<input name='action' value='Undo this change' type='submit' accesskey="U" />
+		</form> or <a href='<%= url page.name, "revisions" %>' accesskey="A" >Show <b>A</b>ll changes</a>.
+	</p>
+<% end %>

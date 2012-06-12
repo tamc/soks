@@ -1,0 +1,46 @@
+<%=
+require "rss/maker"
+
+RSS::Maker.make("2.0") do |maker|
+  	
+  	maker.encoding = 'iso-8859-1'
+  	
+  	maker.channel.title = "#{name} #{page.name}"
+	maker.channel.description = description
+	maker.channel.link = root_url
+
+	maker.image.title = name
+	maker.image.url = file('logo.png')
+	
+	maker.items.do_sort = true
+	
+	count = 0
+	page.textile.scan(%r{/revision/([^?]+)\?time=(\d+)}) do |linked_pagename,time|
+		break if (count +=1) == 15
+		linked_page = @wiki.page( linked_pagename )
+		revision =  linked_page.revisions.detect { |revision| revision.created_on.to_i >= time.to_i }
+		
+		item = maker.items.new_item
+		item.link = url(linked_page.name)
+		item.title = linked_page.name
+		item.date = revision.revised_on
+		item.author = revision.author
+		item.description = ""
+		revision.number.downto(0) do |number|
+			revision = linked_page.revision(number)
+			break unless revision.author == item.author
+			content_deleted = false
+			revision.changes.each do |change_group|
+				change_group.each do |change|
+					case change[0]
+					when "-"; content_deleted = true
+					when "+"; item.description << "#{change[2]}<br />"
+					end
+				end
+				item.description << "&#8230;<br />"
+			end
+			item.description << "Content was also deleted<br />" if content_deleted
+		end
+	end
+end
+%>

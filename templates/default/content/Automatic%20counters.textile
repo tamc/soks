@@ -1,0 +1,22 @@
+h1. Automatic Counters
+
+There are three automatic counter classes:
+# ViewCountHelper - Counts what is looked on the page 'Popular Pages'
+# ViewerCountHelper - Counts who looks on the page 'Prolific Viewers'
+# AuthorCountHelper - Counts who edits on the page 'Principal Authors'
+
+By default the results tables are updated once an hour, and show the top 20.
+
+The simplest way to use them is to put the following in your start.rb file:
+<pre>
+<code>
+require 'counter-helpers'
+ViewCountHelper.new( wiki ) # Counts which are the most popular pages
+ViewerCountHelper.new( wiki ) # Counts who visits the wiki most
+AuthorCountHelper.new(wiki)
+</code>
+</pre>
+
+They can take extra arguments to adjust their settings: @new( page_name = 'Principal Authors', update_page_every = :hour,  show_top = 20,  cache_name = 'authorcount' )@
+
+Tag: Include this page in the distribution

@@ -1,0 +1,9 @@
+h1. How to report a bug
+
+I really appreciate bug reports.
+
+Please click [[ here => http://www.soks.org/edit/BugTypeATitleHere ]] or go to http://www.soks.org and create a new page whose title starts with bug:, e.g. @bug: does not make tea@.
+
+In that page, please give as much information as you can and leave some contact details.
+
+Tag: Include this page in the distribution

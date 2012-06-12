@@ -1,0 +1,6 @@
+Home Page
+Site Index
+Known Bugs
+[[ Recent Changes => recent changes to this site ]]
+
+<!-- Tag: Include this page in the distribution -->

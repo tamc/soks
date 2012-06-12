@@ -1,0 +1,2 @@
+/* Thanks to Pavel Sykora for fixing this */
+#menu, .command { display:none !important; }

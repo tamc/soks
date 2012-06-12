@@ -1,0 +1,57 @@
+h1. Automatic Importers
+
+There are currently two automatic importers.  (You can also manually import data, see how to import data).
+
+h2. Mail2WikiHelper
+
+The mail to wiki helper periodically scans an email folder on an imap server, and copies messages across to the wiki.   Each message is appended to a page with the same name as the email subject and uses the email from address as the author name.  
+
+*NOTE* This helper ignores the contents of the authenticators array in your start.rb file. 
+
+To use, put the following in your start.rb file:
+
+# @require 'mail2wiki-helper'@
+# @Mail2WikiHelper.new( wiki, :server => 'imap.server', :username => 'user', :password => 'password', :mailbox => 'test')@
+
+This will by default scan the mailbox every hour.  Once a message has been imported into the wiki it is tagged with a 'PutInWiki' keyword that prevents subsequent re-insertions.  To get the message to be re-inserted you must either change the keyword that soks looks for (see below) or unset the keyword using your email program.
+
+There are a few other settings you can change:
+<pre>
+<code>
+DEFAULT_SETTINGS = {
+	:server => 'imap.hermes.cam.ac.uk',
+	:username => 'tamc2',
+	:password => 'missing_a_password',
+	:mailbox => 'test',
+	:check_event => :hour,
+	:subject_regexp => /.*/,
+	:keyword => 'PutInWiki'
+}
+</code>
+</pre>
+	
+
+h2. RSS2WikiHelper
+
+The rss to wiki helper periodically downloads an rss feed and copies it onto a specified page as a series of links.
+
+To use, put the following in your start.rb file:
+
+# @require 'rss2wiki-helper'@
+# @RSS2WikiHelper.new( wiki, :url => 'url of rss feed' )@
+
+By default it will check once an hour, and write the feed to a page with the same name as the feed title.
+
+There are a few other settings you can change:
+<pre>
+<code>
+	DEFAULT_SETTINGS = {
+		:url => 'http://localhost:8000/rss/recent%20changes%20to%20this%20site',
+		:pagename => nil, # If nil, uses channel title,
+		:update_on_event => :hour,
+		:author => 'AutomaticRSS2Wiki',
+	}
+</code>
+</pre>
+
+Tag: Include this page in the distribution

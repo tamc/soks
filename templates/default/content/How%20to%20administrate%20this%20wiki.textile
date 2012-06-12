@@ -1,0 +1,57 @@
+h1. Adjusting the settings
+
+Take a look at the start.rb file in your wiki folder.  This can be used to change the settings such as port and url of this site, and to enable more advanced features such as calendars and automatic summaries.
+
+h2. To start your wiki
+
+The soks-create-wiki.rb script will have created a folder in the directory in which you ran it (by default the folder is 'soks-wiki'). In that folder is a script 'start.rb' run it.
+<code>
+cd soks-wiki
+ruby start.rb
+</code>
+
+h2. To stop your wiki
+
+If you've started the wiki as above, then hold down the ctrl key and press c.
+
+If you have run the wiki as a daemon, or using nohup, then you will need to find the process id of the wiki.  This can be found by @top@ or @ps -e | grep ruby@.  In the first instance, try @kill -INT 123@ where 123 is the number found from top or ps.  That will try and make the wiki gracefully shut down.  If that doesn't work @kill -KILL 123@ will force the wiki to halt immediately.
+
+h2. To make your site accessible beyond localhost
+
+Open start.rb in your directory. Find the line:
+
+<code>
+view = View.new( wiki, "http://localhost:8000", "#{root_directory}/views" )
+</code>
+
+and replace the url with the url and port you wish the wiki to run on.
+
+Then replace
+<code>
+server = WEBrick::HTTPServer.new(:Port => 8000 )
+</code>
+
+with the port you wish the wiki to run on.
+
+h2. To password protect your wiki.
+
+See how to password protect your wiki.
+
+h2. To edit the default site settings used by soks-create-wiki.rb
+
+Edit template/start.rb in the directory where soks was installed.
+
+h2. To change how often the wiki checks the content directory for any changes.
+
+Open start.rb and change this line:
+<code>
+wiki.check_files_every = :min
+</code>
+
+Acceptable values are nil (never), :sec, :min, :hour, :day
+
+h2. To add a page that summarises other pages:
+
+See Automatic summaries
+
+Tag: Include this page in the distribution

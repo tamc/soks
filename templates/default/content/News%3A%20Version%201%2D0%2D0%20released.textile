@@ -1,0 +1,19 @@
+h1. Version 1-0-0 released
+
+It gives me great pleasure to announce the sixth public release of Soks as v1-0-0.  There have been a lot of changes, and much of Soks has now stabalised so I've decided to call it a beta rather than an alpha.  When I iron out a few more bugs I might even be confident in calling it stable.
+
+See how to install soks, or how to upgrade soks for instructions.  There is a full list of list of changes and some known bugs, but in brief:
+
+* Page titles can now have any punctuation, and the wiki urls look slightly prettier.
+* Two new RSS feeds, one of which contains all the pages linked to from a particular page, the other that includes edits made to the contents of linked pages.  These are both useful in conjunction with the automatic summary classes.
+* Some popular pages, authors, visitors counters (not enabled by default)
+* The wiki can now save cache of page data and views when the wiki is shutdown.  This makes starting the wiki again much faster.
+* The way that all the settings are made has completely changed, hopefully to make it clearer, and to enable several wiki's to be mounted on the same Webrick server.
+* Some maintenance helpers, that can periodically slim the wiki (these are not enabled by default)
+* Can now include several static file handlers
+
+There has also been quite a lot of refactoring and bug fixing, all though some (not critical) bugs remain.  With the shift in version numbering, I plan to offer a 1-0-x series of releases as soon as I fix bugs until this release is thoroughly stable.  I will add features to a 1-1-0 release.
+
+
+
+Tag: Include this page in the distribution

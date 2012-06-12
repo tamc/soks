@@ -1,0 +1,22 @@
+h1. Bug competing edits
+
+I had a case today where I was evidently editing a page at the same time someone else was.  He won and my edits were trashed upon save.  (Or at least this is what I surmise happened.)
+
+Is this possible?  --Bil
+
+Umm, trashed on save?  I hope not.  I hope that if you look at the 'show all changes' for the page it will show both edits in the history?  I *seriously* want to know if they are not.
+
+p(. I was paying more attention this time.  Two of us were editing the same page.
+I saved my changes, and they showed up on the page.
+Next, he saved his changes, and my changes were removed (but still available
+via the "show all changes"). --Bil
+
+As for a solution.  There seem to be two routes:
+# Put a 'lock' on the page, so that only one person can see the edit view at once.
+# Try and merge competing edits.
+
+I would prefer to merge, but don't know how to implement...
+
+--tamc2
+
+Tag: Include this page in the distribution

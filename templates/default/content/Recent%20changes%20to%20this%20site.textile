@@ -1,0 +1,307 @@
+h2. Recent Changes to This Site
+
+A RSS feed of changes to this site is available [[ here => /listrss/recent changes to this site ]]
+
+<automaticsummary>
+
+<div class='recentchanges'>
+
+h2. Today
+
+* 00:23 - [[Distribution Home Page]] revised by tamc ([[changes => /revision/Distribution Home Page?time=1127795035]])
+* 00:22 - [[README]] revised by tamc ([[changes => /revision/README?time=1127794944]])
+
+h2. Last Sunday
+
+* 16:01 - [[Changes to Soks-development]] revised by DarcsWatcher ([[changes => /revision/Changes to Soks-development?time=1127678488]])
+
+h2. Last Friday
+
+* 09:37 - [[View-2]] revised by cristi ([[changes => /revision/View-2?time=1127482640]])
+
+h2. 09 Sep
+
+* 14:00 - [[Changes to Soks-development]] revised by DarcsWatcher ([[changes => /revision/Changes to Soks-development?time=1126288855]])
+* 14:00 - [[Changes to Soks-testing]] revised by DarcsWatcher ([[changes => /revision/Changes to Soks-testing?time=1126288852]])
+* 13:26 - [[Fixed Bug: AutomaticSummary does not reflect changes to summarised pages]] revised by tamc2 ([[changes => /revision/Fixed Bug: AutomaticSummary does not reflect changes to summarised pages?time=1126286784]])
+* 07:11 - [[How to use the keyboard shortcuts]] revised by tes ([[changes => /revision/How to use the keyboard shortcuts?time=1126264297]])
+
+h2. 05 Sep
+
+* 19:00 - [[Changes to Soks-development]] revised by DarcsWatcher ([[changes => /revision/Changes to Soks-development?time=1125961227]])
+* 17:48 - [[News: Switch from CVS to Darcs]] revised by tamc2 ([[changes => /revision/News: Switch from CVS to Darcs?time=1125956932]])
+* 04:00 - [[Changes to Soks-development]] revised by DarcsWatcher ([[changes => /revision/Changes to Soks-development?time=1125907241]])
+
+h2. 04 Sep
+
+* 17:29 - [[help?]] revised by test ([[changes => /revision/help??time=1125869372]])
+
+h2. 03 Sep
+
+* 05:22 - [[CategoryHelper]] revised by tamc2 ([[changes => /revision/CategoryHelper?time=1125739377]])
+
+h2. 02 Sep
+
+* 15:00 - [[Changes to Soks-development]] revised by DarcsWatcher ([[changes => /revision/Changes to Soks-development?time=1125687633]])
+* 15:00 - [[Changes to Soks-testing]] revised by DarcsWatcher ([[changes => /revision/Changes to Soks-testing?time=1125687629]])
+* 14:08 - [[Bug: AutomaticSummary can overwrite existing pages]] revised by tamc2 ([[changes => /revision/Bug: AutomaticSummary can overwrite existing pages?time=1125684512]])
+* 14:07 - [[Bug: AutomaticSummary does not remove pages]] revised by tamc2 ([[changes => /revision/Bug: AutomaticSummary does not remove pages?time=1125684474]])
+* 14:06 - [[CategoryHelper]] revised by tamc2 ([[changes => /revision/CategoryHelper?time=1125684397]])
+
+h2. 31 Aug
+
+* 15:08 - [[Bug: edit pages display the title of pages with inverted commas incorrectly]] revised by tamc2 ([[changes => /revision/Bug: edit pages display the title of pages with inverted commas incorrectly?time=1125515302]])
+* 15:05 - [[Fixed bug: edit pages display the title of pages with inverted commas incorrectly]] revised by tamc2 ([[changes => /revision/Fixed bug: edit pages display the title of pages with inverted commas incorrectly?time=1125515146]])
+* 15:00 - [[Changes to Soks-development]] revised by DarcsWatcher ([[changes => /revision/Changes to Soks-development?time=1125514817]])
+* 15:00 - [[Changes to Soks-testing]] revised by DarcsWatcher ([[changes => /revision/Changes to Soks-testing?time=1125514813]])
+
+h2. 30 Aug
+
+* 17:11 - [[To Do List]] revised by tamc2 ([[changes => /revision/To Do List?time=1125436292]])
+
+h2. 29 Aug
+
+* 16:00 - [[Soks Wiki - Support for page tagging added]] revised by Alexandru Popescu ([[changes => /revision/Soks Wiki - Support for page tagging added?time=1125345631]])
+* 14:00 - [[Changes to Soks-development]] revised by DarcsWatcher ([[changes => /revision/Changes to Soks-development?time=1125338426]])
+
+h2. 27 Aug
+
+* 19:00 - [[SOKS features]] revised by Joseph Huang ([[changes => /revision/SOKS features?time=1125183639]])
+
+h2. 26 Aug
+
+* 03:34 - [[News: Switch from CVS to Darcs]] revised by tamc2 ([[changes => /revision/News: Switch from CVS to Darcs?time=1125041686]])
+* 03:28 - [[Changes to Soks-testing]] revised by DarcsWatcher ([[changes => /revision/Changes to Soks-testing?time=1125041331]])
+
+h2. 25 Aug
+
+* 16:00 - [[Changes to Soks-development]] revised by DarcsWatcher ([[changes => /revision/Changes to Soks-development?time=1125000028]])
+
+h2. 24 Aug
+
+* 15:00 - [[Changes to Soks-development]] revised by DarcsWatcher ([[changes => /revision/Changes to Soks-development?time=1124910034]])
+* 10:00 - [[Changes to Soks-testing]] revised by DarcsWatcher ([[changes => /revision/Changes to Soks-testing?time=1124892021]])
+* 09:37 - [[Changes to Soks-testing]] revised by tamc2 ([[changes => /revision/Changes to Soks-testing?time=1124890658]])
+* 09:36 - [[Changes to Soks-development]] revised by tamc2 ([[changes => /revision/Changes to Soks-development?time=1124890606]])
+* 09:23 - [[[Soks] Switch from CVS to Darcs]] revised by tamc2 ([[changes => /revision/[Soks] Switch from CVS to Darcs?time=1124889825]])
+* 09:19 - [[Changes to Soks-development]] revised by DarcsWatcher ([[changes => /revision/Changes to Soks-development?time=1124889574]])
+* 09:19 - [[Changes to Soks-testing]] revised by DarcsWatcher ([[changes => /revision/Changes to Soks-testing?time=1124889573]])
+* 06:37 - [[Bug: ERROR stack level too deep: day]] revised by tamc2 ([[changes => /revision/Bug: ERROR stack level too deep: day?time=1124879840]])
+
+h2. 23 Aug
+
+* 18:00 - [[[Soks] Switch from CVS to Darcs]] revised by Tom Counsell ([[changes => /revision/[Soks] Switch from CVS to Darcs?time=1124834437]])
+* 18:00 - [[Changes to Soks-development]] revised by DarcsWatcher ([[changes => /revision/Changes to Soks-development?time=1124834431]])
+* 17:02 - [[Planned Features]] revised by tamc2 ([[changes => /revision/Planned Features?time=1124830923]])
+* 14:46 - [[home page]] revised by Joseph Huang ([[changes => /revision/home page?time=1124822779]])
+* 06:13 - [[DarcsWatcher]] revised by tamc2 ([[changes => /revision/DarcsWatcher?time=1124792021]])
+* 06:08 - [[How to enable a blog]] revised by tamc2 ([[changes => /revision/How to enable a blog?time=1124791719]])
+* 06:07 - [[WatchPage]] revised by tamc2 ([[changes => /revision/WatchPage?time=1124791661]])
+* 06:00 - [[Changes to Soks-development]] revised by DarcsWatcher ([[changes => /revision/Changes to Soks-development?time=1124791225]])
+* 06:00 - [[Changes to Soks-testing]] revised by DarcsWatcher ([[changes => /revision/Changes to Soks-testing?time=1124791214]])
+* 03:13 - [[How to get the latest Soks from cvs]] revised by tamc2 ([[changes => /revision/How to get the latest Soks from cvs?time=1124781233]])
+* 02:49 - [[News: Switch from CVS to Darcs]] revised by tamc2 ([[changes => /revision/News: Switch from CVS to Darcs?time=1124779747]])
+* 02:26 - [[List of changes]] revised by tamc2 ([[changes => /revision/List of changes?time=1124778412]])
+* 02:23 - [[list of changes for older versions]] revised by tamc2 ([[changes => /revision/list of changes for older versions?time=1124778220]])
+* 02:19 - [[Changes to Soks-Stable]] revised by DarcsWatcher ([[changes => /revision/Changes to Soks-Stable?time=1124777988]])
+
+h2. 18 Aug
+
+* 17:37 - [[home page]] revised by tamc2 ([[changes => /revision/home page?time=1124401051]])
+* 17:30 - [[How to enable a blog]] revised by tamc2 ([[changes => /revision/How to enable a blog?time=1124400618]])
+* 14:38 - [[List of changes]] revised by tamc2 ([[changes => /revision/List of changes?time=1124390324]])
+* 11:24 - [[SOKS features]] revised by Joseph Huang ([[changes => /revision/SOKS features?time=1124378672]])
+* 11:21 - [[home page]] revised by Joseph Huang ([[changes => /revision/home page?time=1124378502]])
+* 11:14 - [[home page]] revised by tamc2 ([[changes => /revision/home page?time=1124378053]])
+* 11:13 - [[Distribution Home Page]] revised by tamc2 ([[changes => /revision/Distribution Home Page?time=1124378036]])
+* 11:12 - [[How to hack soks]] revised by tamc2 ([[changes => /revision/How to hack soks?time=1124377944]])
+* 11:11 - [[Soks's Licence]] revised by tamc2 ([[changes => /revision/Soks's Licence?time=1124377871]])
+* 11:11 - [[Soks Licence]] revised by tamc2 ([[changes => /revision/Soks Licence?time=1124377866]])
+* 04:38 - [[Planned Features]] revised by tamc2 ([[changes => /revision/Planned Features?time=1124354329]])
+
+h2. 17 Aug
+
+* 21:19 - [[Planned Features]] revised by Joseph Huang ([[changes => /revision/Planned Features?time=1124327985]])
+* 20:52 - [[Automatic linking]] revised by Joseph Huang ([[changes => /revision/Automatic linking?time=1124326356]])
+* 20:52 - [[Automatic linking between pages]] revised by Joseph Huang ([[changes => /revision/Automatic linking between pages?time=1124326355]])
+
+h2. 16 Aug
+
+* 07:45 - [[home page]] revised by Joseph Huang ([[changes => /revision/home page?time=1124192735]])
+* 05:59 - [[Planned Features]] revised by Bil Kleb ([[changes => /revision/Planned Features?time=1124186356]])
+* 04:27 - [[Planned Features]] revised by tamc2 ([[changes => /revision/Planned Features?time=1124180868]])
+
+h2. 15 Aug
+
+* 21:15 - [[Planned Features]] revised by Joseph Huang ([[changes => /revision/Planned Features?time=1124154918]])
+* 20:55 - [[SOKS features]] revised by Joseph Huang ([[changes => /revision/SOKS features?time=1124153719]])
+
+h2. 11 Aug
+
+* 04:55 - [[How to enable a blog]] revised by Giulio Piancastelli ([[changes => /revision/How to enable a blog?time=1123750509]])
+
+h2. 10 Aug
+
+* 14:10 - [[List of changes]] revised by tamc2 ([[changes => /revision/List of changes?time=1123697434]])
+* 09:38 - [[How to enable a blog]] revised by tamc2 ([[changes => /revision/How to enable a blog?time=1123681136]])
+* 08:32 - [[How to enable a blog]] revised by Bil ([[changes => /revision/How to enable a blog?time=1123677154]])
+* 05:38 - [[Sidebar Page]] revised by tamc2 ([[changes => /revision/Sidebar Page?time=1123666731]])
+* 05:37 - [[News: Version 1-0-1 released]] revised by tamc2 ([[changes => /revision/News: Version 1-0-1 released?time=1123666676]])
+
+h2. 09 Aug
+
+* 17:33 - [[How to enable a blog]] revised by Bil ([[changes => /revision/How to enable a blog?time=1123623200]])
+* 16:43 - [[List of changes]] revised by tamc2 ([[changes => /revision/List of changes?time=1123620232]])
+* 16:31 - [[How to enable a blog]] revised by tamc2 ([[changes => /revision/How to enable a blog?time=1123619477]])
+* 16:04 - [[[Soks] Enabling blogs?]] revised by tamc2 ([[changes => /revision/[Soks] Enabling blogs??time=1123617896]])
+* 14:54 - [[To Do List]] revised by tamc2 ([[changes => /revision/To Do List?time=1123613669]])
+* 14:53 - [[Author]] revised by tamc2 ([[changes => /revision/Author?time=1123613633]])
+* 14:06 - [[Sidebar Page]] revised by tamc2 ([[changes => /revision/Sidebar Page?time=1123610799]])
+* 13:33 - [[How to upgrade soks]] revised by tamc2 ([[changes => /revision/How to upgrade soks?time=1123608824]])
+* 13:28 - [[News: Version 1-0-1 released]] revised by tamc2 ([[changes => /revision/News: Version 1-0-1 released?time=1123608530]])
+* 13:25 - [[How to re-build the page cache]] revised by tamc2 ([[changes => /revision/How to re-build the page cache?time=1123608302]])
+* 13:23 - [[Bug: Page.inserted_into is never purged]] revised by tamc2 ([[changes => /revision/Bug: Page.inserted_into is never purged?time=1123608197]])
+* 13:22 - [[Fixed bug: E-mail addresses with hyphens not recognised]] revised by tamc2 ([[changes => /revision/Fixed bug: E-mail addresses with hyphens not recognised?time=1123608160]])
+* 13:22 - [[Bug: E-mail addresses with hyphens not recognised]] revised by tamc2 ([[changes => /revision/Bug: E-mail addresses with hyphens not recognised?time=1123608160]])
+* 13:22 - [[Fixed Bug: Does not redirect pages with no view]] revised by tamc2 ([[changes => /revision/Fixed Bug: Does not redirect pages with no view?time=1123608125]])
+* 13:22 - [[Bug: Does not redirect pages with no view]] revised by tamc2 ([[changes => /revision/Bug: Does not redirect pages with no view?time=1123608125]])
+* 13:21 - [[Fixed Bug: AutomaticSummary does not reflect changes to summarised pages]] revised by tamc2 ([[changes => /revision/Fixed Bug: AutomaticSummary does not reflect changes to summarised pages?time=1123608094]])
+* 13:21 - [[Bug: AutomaticSummary does not reflect changes to summarised pages]] revised by tamc2 ([[changes => /revision/Bug: AutomaticSummary does not reflect changes to summarised pages?time=1123608094]])
+* 13:20 - [[Fixed Bug: Wrong title in Result Search page]] revised by tamc2 ([[changes => /revision/Fixed Bug: Wrong title in Result Search page?time=1123608046]])
+* 13:20 - [[Bug: Wrong title in Result Search page]] revised by tamc2 ([[changes => /revision/Bug: Wrong title in Result Search page?time=1123608046]])
+* 13:18 - [[README]] revised by tamc2 ([[changes => /revision/README?time=1123607929]])
+* 10:00 - [[[Soks] Enabling blogs?]] revised by Tom Counsell ([[changes => /revision/[Soks] Enabling blogs??time=1123596007]])
+* 04:48 - [[Syntax highlight code]] revised by tamc2 ([[changes => /revision/Syntax highlight code?time=1123577312]])
+
+h2. 06 Aug
+
+* 05:33 - [[List of changes]] revised by tamc2 ([[changes => /revision/List of changes?time=1123320821]])
+
+h2. 29 Jul
+
+* 11:01 - [[sandbox]] revised by Kelzer ([[changes => /revision/sandbox?time=1122649295]])
+* 08:38 - [[Thinking about meta-data]] revised by Giulio Piancastelli ([[changes => /revision/Thinking about meta-data?time=1122640697]])
+
+h2. 28 Jul
+
+* 12:44 - [[Thinking about meta-data]] revised by tamc2 ([[changes => /revision/Thinking about meta-data?time=1122569096]])
+* 12:18 - [[Thinking about meta-data]] revised by Giulio Piancastelli ([[changes => /revision/Thinking about meta-data?time=1122567482]])
+* 09:35 - [[How to re-build the page cache]] revised by tamc2 ([[changes => /revision/How to re-build the page cache?time=1122557708]])
+* 06:22 - [[To Do List]] revised by tamc2 ([[changes => /revision/To Do List?time=1122546127]])
+
+h2. 27 Jul
+
+* 15:45 - [[Bug: E-mail addresses with hyphens not recognised]] revised by tamc2 ([[changes => /revision/Bug: E-mail addresses with hyphens not recognised?time=1122493547]])
+* 15:44 - [[List of changes]] revised by tamc2 ([[changes => /revision/List of changes?time=1122493498]])
+* 15:01 - [[Bug: Does not redirect pages with no view]] revised by tamc2 ([[changes => /revision/Bug: Does not redirect pages with no view?time=1122490863]])
+* 14:47 - [[Bug: AutomaticSummary does not reflect changes to summarised pages]] revised by tamc2 ([[changes => /revision/Bug: AutomaticSummary does not reflect changes to summarised pages?time=1122490039]])
+* 14:46 - [[Bug: Page.inserted_into is never purged]] revised by tamc2 ([[changes => /revision/Bug: Page.inserted_into is never purged?time=1122489997]])
+* 13:08 - [[Thinking about meta-data]] revised by tamc2 ([[changes => /revision/Thinking about meta-data?time=1122484094]])
+* 12:56 - [[To Do List]] revised by tamc2 ([[changes => /revision/To Do List?time=1122483372]])
+* 12:54 - [[How to hack soks]] revised by tamc2 ([[changes => /revision/How to hack soks?time=1122483256]])
+* 10:39 - [[How to hack soks]] revised by Giulio Piancastelli ([[changes => /revision/How to hack soks?time=1122475152]])
+* 10:29 - [[Bug: Wrong title in Result Search page]] revised by Giulio Piancastelli ([[changes => /revision/Bug: Wrong title in Result Search page?time=1122474575]])
+* 10:26 - [[To Do List]] revised by Giulio Piancastelli ([[changes => /revision/To Do List?time=1122474419]])
+* 06:02 - [[home page]] revised by tamc2 ([[changes => /revision/home page?time=1122458556]])
+* 05:52 - [[Latest News]] revised by tamc2 ([[changes => /revision/Latest News?time=1122457965]])
+* 05:22 - [[Recent changes to this site]] revised by tamc2 ([[changes => /revision/Recent changes to this site?time=1122456133]])
+* 05:03 - [[This is a test]] revised by tamc2 ([[changes => /revision/This is a test?time=1122455013]])
+* 03:42 - [[Bug: Wrong title in Result Search page]] revised by tamc2 ([[changes => /revision/Bug: Wrong title in Result Search page?time=1122450129]])
+
+h2. 26 Jul
+
+* 19:16 - [[This is a test]] revised by don ([[changes => /revision/This is a test?time=1122419781]])
+* 10:08 - [[Bug: Wrong title in Result Search page]] revised by Giulio Piancastelli ([[changes => /revision/Bug: Wrong title in Result Search page?time=1122386925]])
+* 07:17 - [[To Do List]] revised by tamc2 ([[changes => /revision/To Do List?time=1122376653]])
+
+h2. 25 Jul
+
+* 13:48 - [[Automatic importers]] revised by tamc2 ([[changes => /revision/Automatic importers?time=1122313715]])
+* 13:17 - [[How to hack soks]] revised by tamc2 ([[changes => /revision/How to hack soks?time=1122311821]])
+* 13:14 - [[List of changes]] revised by tamc2 ([[changes => /revision/List of changes?time=1122311644]])
+* 13:10 - [[Bug: Wrong title in Result Search page]] revised by tamc2 ([[changes => /revision/Bug: Wrong title in Result Search page?time=1122311458]])
+* 11:09 - [[Bug: Wrong title in Result Search page]] revised by Giulio Piancastelli ([[changes => /revision/Bug: Wrong title in Result Search page?time=1122304157]])
+* 07:24 - [[Automatic exporters]] revised by tamc2 ([[changes => /revision/Automatic exporters?time=1122290674]])
+* 07:24 - [[Automatic maintenance helpers]] revised by tamc2 ([[changes => /revision/Automatic maintenance helpers?time=1122290661]])
+* 07:23 - [[Automatic counters]] revised by tamc2 ([[changes => /revision/Automatic counters?time=1122290626]])
+* 07:23 - [[How to use the Automatic Helper classes]] revised by tamc2 ([[changes => /revision/How to use the Automatic Helper classes?time=1122290607]])
+* 06:47 - [[Api for classes to modify the wiki]] revised by tamc2 ([[changes => /revision/Api for classes to modify the wiki?time=1122288428]])
+* 06:43 - [[How to use the automatic summary classes]] revised by tamc2 ([[changes => /revision/How to use the automatic summary classes?time=1122288204]])
+* 05:21 - [[To Do List]] revised by tamc2 ([[changes => /revision/To Do List?time=1122283272]])
+
+h2. 24 Jul
+
+* 14:48 - [[home page]] revised by tamc2 ([[changes => /revision/home page?time=1122230929]])
+* 14:20 - [[Distribution Home Page]] revised by tamc2 ([[changes => /revision/Distribution Home Page?time=1122229219]])
+* 13:57 - [[News: Version 1-0-0 released]] revised by tamc2 ([[changes => /revision/News: Version 1-0-0 released?time=1122227862]])
+* 13:57 - [[How to upgrade soks]] revised by tamc2 ([[changes => /revision/How to upgrade soks?time=1122227823]])
+* 13:39 - [[List of changes]] revised by tamc2 ([[changes => /revision/List of changes?time=1122226760]])
+* 13:37 - [[News: Next release due, so this site is being edited]] revised by tamc2 ([[changes => /revision/News: Next release due, so this site is being edited?time=1122226630]])
+* 13:32 - [[SOKS features]] revised by tamc2 ([[changes => /revision/SOKS features?time=1122226369]])
+* 13:27 - [[Bug: Pages that link here may not appear on restart]] revised by tamc2 ([[changes => /revision/Bug: Pages that link here may not appear on restart?time=1122226056]])
+* 13:27 - [[vised on 2005 J]] revised by tamc2 ([[changes => /revision/vised on 2005 J?time=1122226041]])
+* 13:18 - [[Tag: Include this page in the distribution]] revised by tamc2 ([[changes => /revision/Tag: Include this page in the distribution?time=1122225508]])
+* 13:17 - [[Bug: Competing edits]] revised by tamc2 ([[changes => /revision/Bug: Competing edits?time=1122225439]])
+* 09:27 - [[Sidebar Page]] revised by tamc2 ([[changes => /revision/Sidebar Page?time=1122211640]])
+* 09:09 - [[Recent changes to this site]] revised by tamc2 ([[changes => /revision/Recent changes to this site?time=1122210575]])
+* 09:00 - [[[Soks] email addresses imported to wiki]] revised by Bil.Kleb@NASA.gov ([[changes => /revision/[Soks] email addresses imported to wiki?time=1122210004]])
+* 09:00 - [[README]] revised by tamc2 ([[changes => /revision/README?time=1122210003]])
+* 08:35 - [[Bug: Memory leak]] revised by tamc2 ([[changes => /revision/Bug: Memory leak?time=1122208534]])
+* 08:35 - [[Bug: Email adresses in page titles cause incorrect links]] revised by tamc2 ([[changes => /revision/Bug: Email adresses in page titles cause incorrect links?time=1122208520]])
+* 08:35 - [[Bug: E-mail addresses with hyphens not recognised]] revised by tamc2 ([[changes => /revision/Bug: E-mail addresses with hyphens not recognised?time=1122208507]])
+* 08:33 - [[Bug: Textile mishandles paragraphs]] revised by tamc2 ([[changes => /revision/Bug: Textile mishandles paragraphs?time=1122208436]])
+* 08:33 - [[Bug: Unanticipated Rollbacks]] revised by tamc2 ([[changes => /revision/Bug: Unanticipated Rollbacks?time=1122208398]])
+* 08:32 - [[Bug: notextile does not prevent page inserts]] revised by tamc2 ([[changes => /revision/Bug: notextile does not prevent page inserts?time=1122208370]])
+* 08:32 - [[Bug: GEM limits title lengths]] revised by tamc2 ([[changes => /revision/Bug: GEM limits title lengths?time=1122208356]])
+* 08:31 - [[Bug: Does not make use of if-modified-since request headers]] revised by tamc2 ([[changes => /revision/Bug: Does not make use of if-modified-since request headers?time=1122208295]])
+* 08:31 - [[How to import data]] revised by tamc2 ([[changes => /revision/How to import data?time=1122208269]])
+* 08:30 - [[How to import data to this wiki]] revised by tamc2 ([[changes => /revision/How to import data to this wiki?time=1122208228]])
+* 08:28 - [[How to password protect your wiki]] revised by tamc2 ([[changes => /revision/How to password protect your wiki?time=1122208126]])
+* 08:23 - [[How to get the latest Soks from cvs]] revised by tamc2 ([[changes => /revision/How to get the latest Soks from cvs?time=1122207828]])
+* 08:21 - [[Bug: Type a title here]] revised by tamc2 ([[changes => /revision/Bug: Type a title here?time=1122207715]])
+* 08:20 - [[How to report a bug]] revised by tamc2 ([[changes => /revision/How to report a bug?time=1122207649]])
+* 08:19 - [[How to use this wiki]] revised by tamc2 ([[changes => /revision/How to use this wiki?time=1122207587]])
+* 08:19 - [[How to use the keyboard shortcuts]] revised by tamc2 ([[changes => /revision/How to use the keyboard shortcuts?time=1122207567]])
+* 08:19 - [[How to install Soks]] revised by tamc2 ([[changes => /revision/How to install Soks?time=1122207554]])
+* 08:18 - [[How to hack soks]] revised by tamc2 ([[changes => /revision/How to hack soks?time=1122207534]])
+* 08:18 - [[How to export a site from this wiki]] revised by tamc2 ([[changes => /revision/How to export a site from this wiki?time=1122207511]])
+* 08:17 - [[How to change the way this wiki looks]] revised by tamc2 ([[changes => /revision/How to change the way this wiki looks?time=1122207465]])
+* 08:17 - [[How to administrate this wiki]] revised by tamc2 ([[changes => /revision/How to administrate this wiki?time=1122207449]])
+* 08:16 - [[Planned Features]] revised by tamc2 ([[changes => /revision/Planned Features?time=1122207405]])
+* 08:16 - [[RSS feed]] revised by tamc2 ([[changes => /revision/RSS feed?time=1122207373]])
+* 08:15 - [[Per Wiki Templates]] revised by tamc2 ([[changes => /revision/Per Wiki Templates?time=1122207327]])
+* 08:15 - [[How to import a site from instiki]] revised by tamc2 ([[changes => /revision/How to import a site from instiki?time=1122207308]])
+* 08:14 - [[Api for classes to modify the wiki]] revised by tamc2 ([[changes => /revision/Api for classes to modify the wiki?time=1122207289]])
+* 08:08 - [[Pages to include in the distribution]] revised by tamc2 ([[changes => /revision/Pages to include in the distribution?time=1122206904]])
+* 07:15 - [[Automatic Summaries]] revised by tamc2 ([[changes => /revision/Automatic Summaries?time=1122203759]])
+* 07:15 - [[Author]] revised by tamc2 ([[changes => /revision/Author?time=1122203732]])
+* 07:15 - [[Soks Licence]] revised by tamc2 ([[changes => /revision/Soks Licence?time=1122203704]])
+* 07:13 - [[Automatic linking between pages]] revised by tamc2 ([[changes => /revision/Automatic linking between pages?time=1122203593]])
+* 06:40 - [[Latest News]] revised by tamc2 ([[changes => /revision/Latest News?time=1122201651]])
+* 05:38 - [[Not a Soks Bug: Sok CVS tar file has "implausibly old time stamp"]] revised by tamc2 ([[changes => /revision/Not a Soks Bug: Sok CVS tar file has "implausibly old time stamp"?time=1122197934]])
+* 05:38 - [[Bug: Sok CVS tar file has "implausibly old time stamp"]] revised by tamc2 ([[changes => /revision/Bug: Sok CVS tar file has "implausibly old time stamp"?time=1122197934]])
+* 05:17 - [[To Do List]] revised by tamc2 ([[changes => /revision/To Do List?time=1122196657]])
+
+h2. 23 Jul
+
+* 18:41 - [[Bug: Memory leak]] revised by tamc2 ([[changes => /revision/Bug: Memory leak?time=1122158464]])
+* 17:25 - [[Fixed Bug: RSS feed does not validate]] revised by tamc2 ([[changes => /revision/Fixed Bug: RSS feed does not validate?time=1122153907]])
+* 17:23 - [[Bug: RSS feed does not validate]] revised by tamc2 ([[changes => /revision/Bug: RSS feed does not validate?time=1122153827]])
+* 17:19 - [[Fixed bug: calendar does not appear]] revised by tamc2 ([[changes => /revision/Fixed bug: calendar does not appear?time=1122153555]])
+* 17:19 - [[bug: calendar does not appear]] revised by tamc2 ([[changes => /revision/bug: calendar does not appear?time=1122153551]])
+* 17:16 - [[Fixed bug: viewing revisions requires authentification]] revised by tamc2 ([[changes => /revision/Fixed bug: viewing revisions requires authentification?time=1122153413]])
+* 17:16 - [[Fixed Bug: automatic linking does not work with trailing punctuation]] revised by tamc2 ([[changes => /revision/Fixed Bug: automatic linking does not work with trailing punctuation?time=1122153411]])
+* 17:16 - [[bug: viewing revisions requires authentification]] revised by tamc2 ([[changes => /revision/bug: viewing revisions requires authentification?time=1122153408]])
+* 17:14 - [[List of changes]] revised by tamc2 ([[changes => /revision/List of changes?time=1122153293]])
+* 17:14 - [[Bug: automatic linking does not work with trailing punctuation]] revised by tamc2 ([[changes => /revision/Bug: automatic linking does not work with trailing punctuation?time=1122153292]])
+* 17:11 - [[Fixed Bug: pages names with single quotes]] revised by tamc2 ([[changes => /revision/Fixed Bug: pages names with single quotes?time=1122153070]])
+* 17:10 - [[Bug: pages names with single quotes]] revised by tamc2 ([[changes => /revision/Bug: pages names with single quotes?time=1122153022]])
+* 12:13 - [[Fixed Bug: Recent changes today can be yesterday]] revised by tamc2 ([[changes => /revision/Fixed Bug: Recent changes today can be yesterday?time=1122135201]])
+* 12:13 - [[Bug: Recent changes today can be yesterday]] revised by tamc2 ([[changes => /revision/Bug: Recent changes today can be yesterday?time=1122135200]])
+
+
+</div>
+
+</automaticsummary>
+
+Tag: Include this page in the distribution

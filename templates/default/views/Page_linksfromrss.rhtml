@@ -1,0 +1,24 @@
+<%=
+require "rss/maker"
+
+RSS::Maker.make("2.0") do |maker|
+  	
+  	maker.encoding = 'iso-8859-1'
+  	
+  	maker.channel.title = "#{page.name} (#{name})"
+	maker.channel.description = description
+	maker.channel.link = url(page.name)
+
+	maker.image.title = name
+	maker.image.url = file("logo.png")
+
+	page.links_from.each do |linked_page|
+		item = maker.items.new_item
+		item.link = url(linked_page.name)
+		item.title = linked_page.name
+		item.date = linked_page.revised_on
+		item.author = linked_page.author
+		item.description = redcloth( linked_page )
+	end
+end
+%>

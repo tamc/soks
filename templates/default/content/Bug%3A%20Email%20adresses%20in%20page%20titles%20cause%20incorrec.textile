@@ -1,0 +1,3 @@
+Seems like having an email adress in a page title causes problems with linking to that page.
+
+Tag: Include this page in the distribution

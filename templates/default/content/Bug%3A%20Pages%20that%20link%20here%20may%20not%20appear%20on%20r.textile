@@ -1,0 +1,13 @@
+The pages that link here sidebar may not appear if you:
+# Run a soks wiki
+# Shutdown the wiki gracefully so that it saves its caches
+# Modify a wiki page off-line (everything is ok if you add a page)
+# Restart the wiki and it succesfully reloads its caches
+
+There are two workarounds:
+# Either delete the caches before restarting in step 4 above
+# Or edit any page in the wiki after restart.  The pages that link here sidebar will then reappear.
+
+Not sure yet as to the cause of this bug, but it doesn't seem to be a showstopper so I'm going to release v1-0-0 anyway. --tamc
+
+Tag: Include this page in the distribution

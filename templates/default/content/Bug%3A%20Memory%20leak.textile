@@ -1,0 +1,13 @@
+There appears to be a memory leak. 
+
+Not sure what triggers it, and whether it occurs in any versions appart from the one in the CVS.
+
+Spotted on this site (www.soks.org) where over a period of a couple of weeks, memory use grew from 47M to 102M.  This is a problem for this site as only 64M of virtual memory is available, and so the larger size causes a slow down through swapping.
+
+Will investiagate, and would appreciate other reports if anyone has a similar experience.
+
+--tamc2
+
+This hasn't repeated after that first time.  It may have just ben a temporary blip.  I'd appreciate any other reports --tamc2
+
+Tag: Include this page in the distribution

@@ -1,0 +1,30 @@
+h1. Pointers on how to use this wiki
+
+h2. Adding Pages
+
+There are several ways to add pages to soks:
+# Click on the 'add a new page'
+# Highlight the text on the page you wish to link from and press crtl-n[1]
+# Type the title of the page you wish to create and click search, there will be a link to create the page at the bottom of the search results.
+# As you are editing a page, put the title of a new page in square brackets like this: <notextile>[[ title of the new page ]]</notextile>.  When you save the page, a link will be created that permits you to create a new page.
+
+Yes, this means it is very easy to create orphaned pages. No I don't think this is a problem, because there is a site index.
+
+fn1. This only works on some browsers.  It doesn't seem to work on Mac Firefox or Mac OmniWeb. It does on Mac Safari.  Please report your successes and failures.
+
+h2. Editing Pages
+
+* To edit a page, click edit this page at the bottom of the page. 
+* The pages are written in textile.  A reference is at http://hobix.com/textile/quick.html
+* Links to other pages within this wiki, and to web addresses, and to e-mail addresses, happen automatically
+* To force a link put it inside double square brackets e.g. <notextile>[[a forced link]]</notextile>
+* To alias a link: <notextile> [[ a different name for </notextile>=><notextile> site index ]] </notextile>
+* To insert another page: <notextile>[ [ insert site index ]]</notextile>
+* This is particularly usefull if you want to insert a picture: <notextile>[ [ insert picture of the soks logo ]]</notextile>
+* It can also be usefull to save one step in directing people to download an attached file: <notextile>[ [ insert attached file to download ]]</notextile>.
+
+h2. Searching
+
+The search box on the right takes a single regular expression.
+
+Tag: Include this page in the distribution
