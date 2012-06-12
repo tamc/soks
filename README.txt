@@ -1,5 +1,12 @@
 h1. SOKS: Another Ruby Wiki
 
+******
+
+IMPORTED TO GITHUB FOR POSTERITY. CODE HAS NOT BEEN MAINTAINED IN 7 YEARS
+
+******
+
+
 * This application is a Wiki (a system to allow the easy and collaborative editing of web pages).
 * The project has been kindly hosted at http://rubyforge.org/projects/soks/
 * The project wiki/home page is at http://www.soks.org
